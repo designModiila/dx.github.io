@@ -144,16 +144,17 @@ header.contact-active ul li a {
   line-height: normal;
 }
 .about {
-  width: 100vw;
+  width: 100%;
   height: 300vh;
   padding: 0 0;
   position: relative;
 }
 .about .bg {
   background: url(../images/bg.png) no-repeat center;
-  /* height: 879px; */
+
   width: calc(1280 / 1920 * 100vw);
-  height: calc(768 / 1920 * 100vh);
+  height: calc(879 / 1920 * 100vh);
+  /* height: 840px; */
   background-color: #0e1126;
   border-radius: 0;
   overflow: hidden;
@@ -186,10 +187,11 @@ header.contact-active ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .about .pin-box .con .box {
   width: calc(1190 / 1920 * 100vw);
-  height: calc(570 / 930 * 100vh);
+  /* height: calc(879 / 930 * 100vh); */
   background-color: #0e1126;
   border-radius: 40px;
   overflow: hidden;
@@ -209,7 +211,7 @@ header.contact-active ul li a {
   width: 660px;
 }
 .about .right .txt {
-  margin-bottom: 130px;
+  margin-bottom: 150px;
   display: flex;
   gap: 100px;
 }

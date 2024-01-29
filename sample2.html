@@ -1,0 +1,472 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta charset="utf-8"/>
+        <title>Groupware Pro</title>
+        <meta property="og:title" content="Groupware Pro"/>
+        <meta name="description" content="Groupware Pro"/>
+        <meta property="og:description" content="Groupware Pro"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+<!-- 
+        <link rel="stylesheet" type="text/css" href="css/font.css" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        
+        
+       
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/swiper.min.js"></script>
+             
+        <script type="text/javascript" src="js/gsap.min.js"></script> 
+        <script type="text/javascript" src="js/scrollTrigger.min.js"></script>  -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+        <style>
+body {background: #000; font-family: notosans;}
+.project-desc {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    display: block;
+}
+
+
+.project-desc {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  display: block;
+}
+.project-desc:after {
+  position: absolute;
+  top: -1vw;
+  left: -1vw;
+  right: -1vw;
+  bottom: -5vw;
+  content: "";
+}
+.project-desc .project-title {
+  font-size: 96px;
+  font-size: max(5rem, 5vw);
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  color: #fff;
+}
+.project-desc .project-title > span {
+  position: relative;
+  display: inline-block;
+}
+.project-desc .project-title .sentence {
+  display: inline-block;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.project-desc .project-title .sentence > div,
+.project-desc .project-title .sentence > span {
+  margin: 0 0.2em;
+  display: block;
+}
+.project-desc .project-title .sentence.filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-text-fill-color: #fff;
+  clip-path: circle(0vw at 50% 50%);
+}
+.project-desc .project-title .sentence div {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  filter: grayscale(0);
+}
+.project-desc .btn-show {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  margin-top: 0.6666666667em;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 300;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: max(1.75rem, 1.6vw);
+}
+@media screen and (max-width: 1000px) {
+  .project-desc .btn-show {
+    font-size: max(1.5rem, 2.8vw);
+  }
+}
+@media screen and (max-width: 500px) {
+  .project-desc .btn-show {
+    font-size: 4.8vw;
+  }
+}
+.project-desc .btn-show span {
+  padding-bottom: 0.375em;
+  display: block;
+  position: relative;
+  transform: translateY(100%);
+  transition: transform 600ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.project-desc .btn-show:after {
+  border-top: 1px solid #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  bottom: 0;
+  width: 0%;
+  transition: width 400ms cubic-bezier(0.86, 0, 0.07, 1);
+}
+.project-desc.active .btn-show span {
+  transform: translateY(0);
+  transition-delay: 300ms;
+}
+.project-desc.active .btn-show:after {
+  width: 100%;
+}
+
+
+.sentence.filled span {
+    transition: clip-path 0.5s ease;
+}
+
+        </style>
+
+
+    </head>
+    <body>
+      <div class="sub0101_wrap left_category_wrap">
+
+        <div class="sc_box aos-init aos-animate" data-aos="fade-right">
+          <div class="list_scroll2">
+            <div><a href="sub01_0101.php">WEB · APP</a></div>
+            <div class="active"><a href="#.">PROGRAM</a></div>
+            <div><a href="sub01_0103.php">ETC</a></div>
+          </div>
+        </div>
+      
+        <div class="sc_box_mobile hidden-lg mb30 aos-init aos-animate" data-aos="fade-up">
+          <i class="xi-angle-down"></i>
+          <select name="" id="" class="eng2">
+            <option value="WEBSITE">WEB · APP</option>
+            <option value="PROGRAM">PROGRAM</option>
+            <option value="ETC">ETC</option>
+          </select>		
+        </div>
+      
+      
+      
+      
+      
+      
+        <div class="container_wrap aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500">
+      
+          <div class="swiper-container work_list_scroll swiper-container-initialized swiper-container-vertical swiper-container-autoheight">
+            <div class="swiper-wrapper " style="transition-duration: 0ms; transform: translate3d(0px, 220px, 0px); height: 140px;">
+      
+              <div class="swiper-slide swiper-slide-visible swiper-slide-active" data-visual="work_visual_piolink" data-hash="slide1" style="height: 110px;">
+                <div class="title">
+                  <h3><a href="#slide1">파트너포털 및 TAC 시스템</a></h3>
+                  <p>#고객관리 #제품관리 #A/S관리 #제품세일즈관리 #유지보수신청 #대리점관리</p>
+                </div>
+                <div class="site_info_box">
+                  <h4>㈜파이오링크</h4>
+                  <p class="date"><i>2020.09</i></p>
+                  <div class="desc">
+                    국내 최고의 클라우드 데이터센터 최적화 솔루션 및 제품을 제공하는<br>
+                    상장기업으로서 협력사들과의 영업 및 고객관리, 업무협업, 제품납품 및<br>
+                    유지보수(A/S) 관리를 위한 업무관리 시스템 
+                  </div>
+                  <div class="text-right pt40"><a href="sub01_0102piolink.php" class="more"><span></span></a></div>
+                </div>
+              </div>
+      
+              <div class="swiper-slide swiper-slide-visible swiper-slide-next" data-visual="work_visual_fivid" data-hash="slide2" style="height: 110px;">
+                <div class="title">
+                  <h3><a href="#slide2">혁신공정 성과관리 플랫폼</a></h3>
+                  <p>#성과관리  #과제관리  #디스플레이  #국책과제  #일정관리  #회원관리  #권한관리</p>
+                </div>
+                <div class="site_info_box">
+                  <h4>한국디스플레이산업협회</h4>
+                  <p class="date"><i>2020.04</i></p>
+                  <div class="desc">
+                    디스플레이 혁신공정 플랫폼을 통한 FIVid (Flexible Intelligent Variable<br>
+                    information display) 세부과제들을 관리하고 중소/중견기업의 사업화,<br>
+                    네트워킹, 홍보를 지원 및 혁신공정센터를 위한 성과관리시스템
+                  </div>
+                  <div class="text-right pt40"><a href="sub01_0102fivid.php" class="more"><span></span></a></div>
+                </div>
+              </div>
+      
+              <div class="swiper-slide swiper-slide-visible" data-visual="work_visual_msc" data-hash="slide3" style="height: 110px;">
+                <div class="title">
+                  <h3><a href="#slide3">임직원 근태관리 시스템</a></h3>
+                  <p>#근태관리  #직원관리  #연차관리  #출퇴근현황   #외근관리   #휴가/휴직관리   #출장관리</p>
+                </div>
+                <div class="site_info_box">
+                  <h4>엠에스씨코리아㈜</h4>
+                  <p class="date"><i>2019.12</i></p>
+                  <div class="desc">
+                    스위스 제네바에 본사를 두고있는 다국적 Global 기업인 MSC(엠에스씨)의<br>
+                    한국 지사로 통관대리 및 관련서비스, 국제해운대리 기업으로서 임직원들의<br>
+                    출퇴근 및 연차/휴가 등에 대한 신청, 관리를 위한 내부 운영 시스템 
+                  </div>
+                  <div class="text-right pt40"><a href="sub01_0102msc.php" class="more"><span></span></a></div>
+                </div>
+              </div>
+      
+              <div class="swiper-slide" data-visual="work_visual_sdagolf" data-hash="slide4" style="height: 110px;">
+                <div class="title">
+                  <h3><a href="#slide4">골프 멤버십 및 부킹관리</a></h3>
+                  <p>#부킹관리  #예약관리   #타임관리   #회원관리  #계약관리  #부킹통계  #골프회원권</p>
+                </div>
+                <div class="site_info_box">
+                  <h4>신동아골프㈜</h4>
+                  <p class="date"><i>2019.08</i></p>
+                  <div class="desc">
+                    국내 최상위 골프 멤버십 전문기업으로 골프 회원권 판매, 골프투어상품,<br>
+                    골프 부킹 서비스 등 골프와 관련된 다양하고 품격높은 서비스를 제공하고<br>
+                    있으며 온라인을 통한 계약 및 부킹예약 관리 시스템 구축   
+                  </div>
+                  <div class="text-right pt40"><a href="sub01_0102sdagolf.php" class="more"><span></span></a></div>
+                </div>
+              </div>
+      
+              <div class="swiper-slide" data-visual="work_visual_stdisplay" data-hash="slide5" style="height: 110px;">
+                <div class="title">
+                  <h3><a href="#slide5">국책과제 성과관리 시스템</a></h3>
+                  <p>#실적관리  #통계  #성과관리   # 과제관리 #논문관리 #권한관리  #회원관리 </p>
+                </div>
+                <div class="site_info_box">
+                  <h4>LG디스플레이</h4>
+                  <p class="date"><i>2019.03</i></p>
+                  <div class="desc">
+                    스트레처블 디스플레이' 국책과제의 세부 과제들을 관리하고<br>
+                    참여 기관의 사업화, 네트워킹, 홍보 등을 지원함과 동시에 협력하여 성공적으로<br>
+                    과제를 수행할수 있는 국책과제에 대한 업무관리 및 성과관리 시스템
+                  </div>
+                  <div class="text-right pt40"><a href="sub01_0102stdisplay.php" class="more"><span></span></a></div>
+                </div>
+              </div>
+      
+      
+              <div class="swiper-slide" data-visual="work_visual_moonpilates" data-hash="slide6" style="height: 110px;">
+                <div class="title">
+                  <h3><a href="#slide6">예약 및 운영 관리시스템</a></h3>
+                  <p>#회원관리  #쿠폰관리  #예약관리  #필라테스  #수업관리  #지점관리  #건강  #강사관리 </p>
+                </div>
+                <div class="site_info_box">
+                  <h4>문필라테스</h4>
+                  <p class="date"><i>2018.07</i></p>
+                  <div class="desc">
+                    전문 필라테스 브랜드인 문필라테스 PC/Mobile 브랜드 홍보 웹사이트 구축 및<br>
+                    수업프로그램 관리, 예약신청, 예약관리, 티켓 관리, 회원 및 지점관리 등<br>
+                    고객 예약 신청 기능 및 회원/예약 관리 시스템  
+                  </div>
+                  <div class="text-right pt40"><a href="sub01_0102moonpilates.php" class="more"><span></span></a></div>
+                </div>
+              </div>
+      
+              <div class="swiper-slide" data-visual="work_visual_kunst" data-hash="slide7" style="height: 110px;">
+                <div class="title">
+                  <h3><a href="#slide7">교육 및 업무관리 시스템</a></h3>
+                  <p>#회원관리  #지사관리  #미술교육   #지점관리  #학생관리  #교재관리  #선생님관리 </p>
+                </div>
+                <div class="site_info_box">
+                  <h4>㈜쿤스트</h4>
+                  <p class="date"><i>2018.01</i></p>
+                  <div class="desc">
+                    아이의 꿈과 미래를 생각하는 미술교육 전문기업으로 학생과 학부모<br>
+                    그리고 선생님과 지자/지점에 대한 입체적이고 체계적인 교육 서비스 제공과<br>
+                    각종 교육 컨텐츠 및 업무 관리를 위한 운영관리 시스템 구축 
+                  </div>
+                  <div class="text-right pt40"><a href="sub01_0102kunst.php" class="more"><span></span></a></div>
+                </div>
+              </div>
+      
+              <div class="swiper-slide" data-visual="work_visual_memory4u" data-hash="slide8" style="height: 110px;">
+                <div class="title">
+                  <h3><a href="#slide8">추모공원 업무관리 시스템</a></h3>
+                  <p>#장사접수  #석물신청관리  #계약관리   #고객관리  #입금관리  #제사접수  #납골당관리</p>
+                </div>
+                <div class="site_info_box">
+                  <h4>㈜푸른자리</h4>
+                  <p class="date"><i>2017.04</i></p>
+                  <div class="desc">
+                    가족 납골묘, 납골당 및 자연장 등 가족들의 평안한 영면을 위한<br>
+                    가족공원묘원 양평공원(별 그리다)의 업무관리 시스템으로 장사접수, 계약관리,<br>
+                    고객관리, 입금관리까지 추모공원과 관련된 각종 업무관리를 위한 관리시스템 
+                  </div>
+                  <div class="text-right pt40"><a href="sub01_0102memory4u.php" class="more"><span></span></a></div>
+                </div>
+              </div>
+      
+              <div class="swiper-slide" data-visual="work_visual_asobi" data-hash="slide9" style="height: 110px;">
+                <div class="title">
+                  <h3><a href="#slide9">지점 및 업무관리 시스템</a></h3>
+                  <p>#지사관리  #대리점관리  #교육관리 #학생회원관리  #학부모회원관리  #선생님관리</p>
+                </div>
+                <div class="site_info_box">
+                  <h4>㈜아소비교육</h4>
+                  <p class="date"><i>2016.09</i></p>
+                  <div class="desc">
+                    우리 아이들에게 행복한 공부를 가르친다는 철학을 바탕으로한 교육전문기업으로<br>
+                    학생과 학부모 그리고 선생님과 지자/지점에 대한 입체적이고 체계적인 교육<br>
+                    컨텐츠 및 업무 관리를 위한 업무 및 운영관리 시스템 
+                  </div>
+                  <div class="text-right pt40"><a href="sub01_0102asobi.php" class="more"><span></span></a></div>
+                </div>
+              </div>
+      
+      
+      
+      
+      
+            </div>
+            <!-- Add Pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+             <div class="swiper-scrollbar"><div class="swiper-scrollbar-drag" style="height: 17px; transform: translate3d(0px, 0px, 0px);"></div></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+      
+      
+          <div class="work_list_bg on" style="background: url(&quot;../images/work/work_visual_piolink.jpg&quot;) center center / cover no-repeat;"></div>
+          <div class="work_list_bg2"></div>
+        </div>
+      
+      </div>
+       
+        <script>
+// function wrapEachCharacter(textContainer) {
+//     const characters = textContainer.textContent.split('');
+//     const wrappedHtml = characters.map(char => {
+//         return char.trim() === '' ? ' ' : 
+//             `<div style="position: relative; display: inline-block; transform: translate(0px, 0px); opacity: 1;">${char}</div>`;
+//     }).join('');
+
+//     textContainer.innerHTML = `<div style="position: relative; display: inline-block;">${wrappedHtml}</div>`;
+// }
+
+
+
+// function addAnimationToProjectDesc(projectDesc) {
+//     projectDesc.addEventListener('mouseenter', (event) => {
+//         applyAnimation(projectDesc, event, true);
+//     });
+
+//     projectDesc.addEventListener('mouseleave', (event) => {
+//         applyAnimation(projectDesc, event, false);
+//     });
+// }
+
+// function applyAnimation(projectDesc, event, isEntering) {
+//     projectDesc.classList.toggle('active', isEntering);
+//     const titleSpan = projectDesc.querySelector('.project-title span');
+//     const filled = projectDesc.querySelector('.project-title .filled');
+//     const rect = titleSpan.getBoundingClientRect();
+//     const xPercent = (event.clientX - rect.left) / rect.width * 100;
+//     const yPercent = (event.clientY - rect.top) / rect.height * 100;
+
+//     gsap.killTweensOf(filled);
+//     gsap.to(filled, {
+//         clipPath: `circle(${isEntering ? '100vw' : '0vw'} at ${xPercent}% ${yPercent}%)`,
+//         duration: isEntering ? 1.25 : 0.6,
+//         ease: isEntering ? "power2.inOut" : "power2.out"
+//     });
+// }
+
+// document.querySelectorAll('.project-desc').forEach((projectDesc) => {
+//     projectDesc.querySelectorAll('.sentence.filled, .sentence.line').forEach(wrapEachCharacter);
+//     addAnimationToProjectDesc(projectDesc);
+// });
+
+// Functions ya and va remain unchanged
+function wrapEachCharacter(textContainer) {
+    const characters = textContainer.textContent.split('');
+    const wrappedHtml = characters.map(char => {
+        return char.trim() === '' ? ' ' : 
+            `<div style="position: relative; display: inline-block; opacity: 0;">${char}</div>`;
+    }).join('');
+
+    textContainer.innerHTML = `<div style="position: relative; display: inline-block;">${wrappedHtml}</div>`;
+}
+
+
+// function animateCharacters(sentenceElement) {
+//     gsap.to(sentenceElement.querySelectorAll('div'), {
+//         opacity: 1,
+//         delay: gsap.utils.mapRange(0, sentenceElement.textContent.length, 0, 0.5),
+//         duration: 0.6,
+//         stagger: 0.05,
+//         ease: 'power2.out'
+//     });
+// }
+function animateCharacters(sentenceElement) {
+    gsap.fromTo(sentenceElement.querySelectorAll('div'), {
+        opacity: 0,
+        transform: "translateY(50%)"
+    }, {
+        opacity: 1,
+        transform: "translateY(0%)",
+        delay: gsap.utils.mapRange(0, sentenceElement.textContent.length, 0, 0.3),
+        duration: 0.7,
+        stagger: 0.05,
+        ease: 'power2.out'
+    });
+}
+
+
+
+
+function addAnimationToProjectDesc(projectDesc) {
+    projectDesc.addEventListener('mouseenter', (event) => {
+        applyAnimation(projectDesc, event, true);
+    });
+
+    projectDesc.addEventListener('mouseleave', (event) => {
+        applyAnimation(projectDesc, event, false);
+    });
+}
+
+function applyAnimation(projectDesc, event, isEntering) {
+    projectDesc.classList.toggle('active', isEntering);
+    const titleSpan = projectDesc.querySelector('.project-title span');
+    const filled = projectDesc.querySelector('.project-title .filled');
+    const rect = titleSpan.getBoundingClientRect();
+    const xPercent = (event.clientX - rect.left) / rect.width * 100;
+    const yPercent = (event.clientY - rect.top) / rect.height * 100;
+
+    gsap.killTweensOf(filled);
+    gsap.to(filled, {
+        clipPath: `circle(${isEntering ? '100vw' : '0vw'} at ${xPercent}% ${yPercent}%)`,
+        duration: isEntering ? 1.25 : 0.6,
+        ease: isEntering ? "power2.inOut" : "power2.out"
+    });
+}
+
+// 글자가 순차적으로 나타나는 애니메이션 적용
+document.querySelectorAll('.sentence.filled, .sentence.line').forEach(sentenceElement => {
+    wrapEachCharacter(sentenceElement);
+    animateCharacters(sentenceElement);
+});
+
+// .project-desc에 대한 이벤트 리스너 추가
+document.querySelectorAll('.project-desc').forEach(addAnimationToProjectDesc);
+
+
+
+        </script>
+</body>
+</html>
