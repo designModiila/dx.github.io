@@ -14,15 +14,18 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars/css/OverlayScrollbars.min.css">
         
-       
+        
         <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
         <script src="js/swiper.min.js"></script>
-             
+        <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
+        <script type="text/javascript" src="js/waypoints.min.js"></script>      
+        
         <script type="text/javascript" src="js/gsap.min.js"></script> 
         <script type="text/javascript" src="js/scrollTrigger.min.js"></script> 
-
-
+        <!-- <script type="text/javascript" src="https://rawgit.com/lmgonzalves/momentum-slider/master/dist/momentum-slider.min.js"></script> -->
+        
 
     </head>
     <body id="my-scroll-area">
@@ -44,10 +47,10 @@
         <nav>
             <div class="button"></div>
             <ul>
-                <li><a href="#company">Company</a></li>
-                <li><a href="#service">Service</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#section1">Company</a></li>
+                <li><a href="#section2">Service</a></li>
+                <li><a href="#section4">Portfolio</a></li>
+                <li><a href="#section6">Contact</a></li>
             </ul>
         </nav>
     </header> 
@@ -62,82 +65,87 @@
             <p class="description ani__text">We never forget that your success is our success.</p>
         </div>
     </div>
-    <div class="section about-text">
+    <div class="section about-text" id="section1">
         <p class="title">DX is all about</p>
     </div>
-    <div class="section about" id="section1">
+    <div class="section about">
         <div class="pin-box">
             <div class="con">
                 <div class="bg"><img src="images/bg.png" /></div>
             </div>
         </div>  
-            <div class="right">
-                <dl class="txt">
-                    <dt>Xceptional Quality</dt>
-                    <dd>incomparable<br>
-                        quality in planning & design</dd>
-                </dl>
-                <dl class="txt">
-                    <dt>Xquisite Creativity</dt>
-                    <dd>out-of-the-box<br>
-                        creativity to fulfill needs</dd>
-                </dl>
-                <dl class="txt">
-                    <dt>Well-Xperienced</dt>
-                    <dd>various experience<br>
-                        in diverse fields</dd>
-                </dl>
-            </div>
-        
-    </div>
-    
-    <div class="section service" id="section2">
-        <div class="account">
-            <div class="left">
-            <p class="ani__text">Account</p>
-            <ul class="ani__text">
-                <li>Communication Planning</li>
-                <li>Concept Development</li>
-                <li>Strategy Development</li>
-            </ul>
-        </div>
-            <img src="images/service_account.png" />
-        </div>
-        <div class="creative">
-            <div class="left">
-                <p class="ani__text">Creative</p>
-                <ul class="ani__text">
-                    <li>POP &middot; POSM</li>
-                    <li>Event &middot; Promotion</li>
-                    <li>Shopper Marketing</li>
-                </ul>
-            </div>
-            <img src="images/service_creative.png" />
+        <div class="right">
+            <dl class="txt">
+                <dt>Xceptional Quality</dt>
+                <dd>incomparable<br>
+                    quality in planning & design</dd>
+            </dl>
+            <dl class="txt">
+                <dt>Xquisite Creativity</dt>
+                <dd>out-of-the-box<br>
+                    creativity to fulfill needs</dd>
+            </dl>
+            <dl class="txt">
+                <dt>Well-Xperienced</dt>
+                <dd>various experience<br>
+                    in diverse fields</dd>
+            </dl>
         </div>
     </div>
 
-    <div class="section width" id="section3">
+    
+    
+    <div class="section service" id="section2">
+
+        <div class="pin-box">
+            <div class="account">
+                <div class="left">
+                <p class="reveal ani__text">Account</p>
+                <ul class="ani__text">
+                    <li class="reveal">Communication Planning</li>
+                    <li class="reveal">Concept Development</li>
+                    <li class="reveal">Strategy Development</li>
+                </ul>
+                </div>
+                <img src="images/service_account.png" />
+            </div>
+            <div class="creative">
+                <div class="left">
+                    <p class="reveal ani__text">Creative</p>
+                    <ul class="ani__text">
+                        <li class="reveal">POP &middot; POSM</li>
+                        <li class="reveal">Event &middot; Promotion</li>
+                        <li class="reveal">Shopper Marketing</li>
+                    </ul>
+                </div>
+                <img src="images/service_creative.png" />
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="section with" id="section3">
         <p class="title ani__text">DX with</p>
-            <ul class="ani__text">
-                <li><img src="images/client_logo_01.png" alt=""></li>
-                <li><img src="images/client_logo_02.png" alt=""></li>
-                <li><img src="images/client_logo_03.png" alt=""></li>
-                <li><img src="images/client_logo_04.png" alt=""></li>
-                <li><img src="images/client_logo_05.png" alt=""></li>
-                <li><img src="images/client_logo_06.png" alt=""></li>
-                <li><img src="images/client_logo_07.png" alt=""></li>
-                <li><img src="images/client_logo_08.png" alt=""></li>
-                <li><img src="images/client_logo_09.png" alt=""></li>
-                <li><img src="images/client_logo_10.png" alt=""></li>
-                <li><img src="images/client_logo_11.png" alt=""></li>
-                <li><img src="images/client_logo_12.png" alt=""></li>
-                <li><img src="images/client_logo_13.png" alt=""></li>
-                <li><img src="images/client_logo_14.png" alt=""></li>
-                <li><img src="images/client_logo_15.png" alt=""></li>
-                <li><img src="images/client_logo_16.png" alt=""></li>
-                <li><img src="images/client_logo_17.png" alt=""></li>
-                <li><img src="images/client_logo_18.png" alt=""></li>
-            </ul>
+        <ul class="ani__text">
+            <li><img src="images/client_logo_01.png" alt=""></li>
+            <li><img src="images/client_logo_02.png" alt=""></li>
+            <li><img src="images/client_logo_03.png" alt=""></li>
+            <li><img src="images/client_logo_04.png" alt=""></li>
+            <li><img src="images/client_logo_05.png" alt=""></li>
+            <li><img src="images/client_logo_06.png" alt=""></li>
+            <li><img src="images/client_logo_07.png" alt=""></li>
+            <li><img src="images/client_logo_08.png" alt=""></li>
+            <li><img src="images/client_logo_09.png" alt=""></li>
+            <li><img src="images/client_logo_10.png" alt=""></li>
+            <li><img src="images/client_logo_11.png" alt=""></li>
+            <li><img src="images/client_logo_12.png" alt=""></li>
+            <li><img src="images/client_logo_13.png" alt=""></li>
+            <li><img src="images/client_logo_14.png" alt=""></li>
+            <li><img src="images/client_logo_15.png" alt=""></li>
+            <li><img src="images/client_logo_16.png" alt=""></li>
+            <li><img src="images/client_logo_17.png" alt=""></li>
+            <li><img src="images/client_logo_18.png" alt=""></li>
+        </ul>
     </div>
     <div class="section portfolio" id="section4">
         <p class="title ani__text">Experienced with</p>
@@ -735,22 +743,27 @@
         
     </div>
     <div class="section year" id="section5">
-        <dl class="ani__text">
-            <dt>12</dt>
-            <dd>Years Of Experiance</dd>
-        </dl>
-        <dl class="ani__text">
-            <dt>162</dt>
-            <dd>Success Project</dd>
-        </dl>
-        <dl class="ani__text">
-            <dt>15</dt>
-            <dd>Active Project</dd>
-        </dl>
-        <dl class="ani__text">
-            <dt>95</dt>
-            <dd>Happy Customers</dd>
-        </dl>
+        <div>
+            <dl class="ani__text">
+                <dt class="counterUp_02">12</dt>
+                <dd>Years Of Experiance</dd>
+            </dl>
+            <dl class="ani__text">
+                <dt class="counterUp">162</dt>
+                <dd>Success Project</dd>
+            </dl>
+        </div>
+        <div>
+            <dl class="ani__text">
+                <dt class="counterUp_02">15</dt>
+                <dd>Active Project</dd>
+            </dl>
+            <dl class="ani__text">
+                <dt class="counterUp">95</dt>
+                <dd>Happy Customers</dd>
+            </dl>
+        </div>
+        
         <div class="text ani__text">
             DX
         </div>
@@ -768,798 +781,10 @@
         <div class="left">
             <p><img src="images/logo.png" ></p>
             <ul>
-                <li><a href="#">Company</a></li>
-                <li><a href="#">service</a></li>
-                <li><a href="#">portfolio</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-        </div>
-        <div class="right">
-            <div>
-                <p class="company-name">(주)DX</p>
-                <p class="company-add">서울 강남구 역삼로33길 7, 3F</p>
-                <p class="company-tel">02-501-9522</p>
-                <p class="copy">Copyright (c) DX All rights reserved.</p>
-            </div>
-            <p><a href="#"><img src="images/sns.png"></a></p>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars/js/OverlayScrollbars.min.js"></script>
-<script type="text/javascript" src="js/common.js"></script>  
-<!--//여기까지 -->
-    
-</body>
-=======
-<!doctype html>
-<html>
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta charset="utf-8"/>
-        <title>Groupware Pro</title>
-        <meta property="og:title" content="Groupware Pro"/>
-        <meta name="description" content="Groupware Pro"/>
-        <meta property="og:description" content="Groupware Pro"/>
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
-
-        <link rel="stylesheet" type="text/css" href="css/font.css" />
-        <link rel="stylesheet" type="text/css" href="css/reset.css" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars/css/OverlayScrollbars.min.css">
-        
-       
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
-        <script src="js/swiper.min.js"></script>
-             
-        <script type="text/javascript" src="js/gsap.min.js"></script> 
-        <script type="text/javascript" src="js/scrollTrigger.min.js"></script> 
-
-
-
-    </head>
-    <body id="my-scroll-area">
-    <header class="" id="header">
-        <div class="logo">
-            <a href="main.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="54" height="28" viewBox="0 0 54 28" fill="none">
-                    <g clip-path="url(#clip0_112_10)">
-                        <path d="M53.7112 1.58908L40.7255 13.9336C40.6839 13.9726 40.6839 14.0384 40.7255 14.0786L53.6133 26.3927C54.2117 26.9642 53.8054 27.9708 52.9757 27.9708H46.8848C46.3072 27.9708 45.7528 27.749 45.3368 27.3517L36.1044 18.546C36.064 18.5083 36.0016 18.5083 35.9613 18.546L26.8415 27.3127C26.3838 27.7526 25.7719 27.9988 25.1355 27.9988H0.140737C0.0636374 27.9988 0 27.9354 0 27.8587V23.1207C0 23.0439 0.0624136 22.9818 0.139513 22.9818H21.9329C22.0014 22.9818 22.0687 22.955 22.1177 22.9074L31.312 14.0433C31.3537 14.0043 31.3524 13.9385 31.312 13.8983L22.0883 5.09989C22.0393 5.05237 21.9733 5.02678 21.9047 5.02678H0.150527C0.0734278 5.02678 0.00979037 4.96341 0.00979037 4.88664V0.14015C0.00979037 0.0633775 0.072204 0.00122843 0.148079 0.00122843H25.0829C25.7156 0.00122843 26.3239 0.246169 26.7791 0.68365L35.9502 9.49786C35.9894 9.53685 36.0543 9.53807 36.0946 9.49786L45.4652 0.503296C45.7834 0.197425 46.2081 0.0268192 46.6499 0.024382L53.0687 9.82418e-06C53.9058 -0.00364601 54.317 1.01389 53.7112 1.58908Z" class="svg-logo-color" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_112_10">
-                            <rect width="54" height="28" class="svg-logo-color"/>
-                        </clipPath>
-                    </defs>
-              </svg>
-            </a>
-        </div>
-        <nav>
-            <div class="button"></div>
-            <ul>
-                <li><a href="#company">Company</a></li>
-                <li><a href="#service">Service</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header> 
-    <div class="section visual">
-        <video autoplay muted loop id="myVideo">
-            <source src="images/visual.mp4" type="video/mp4">
-            <!-- 비디오를 지원하지 않는 브라우저를 위한 대체 텍스트 -->
-            Your browser does not support HTML5 video.
-        </video>
-        <div class="visual-content">
-            <p class="title ani__text">D Xperts in ADVERTISING</p>
-            <p class="description ani__text">We never forget that your success is our success.</p>
-        </div>
-    </div>
-    <div class="section about" id="section1">
-        <div class="pin-box">
-            <p class="title">DX is all about</p>
-            <div class="con">
-                <div class="bg"></div>
-            </div>
-        </div>  
-            <div class="right">
-                <dl class="txt">
-                    <dt>Xceptional Quality</dt>
-                    <dd>incomparable<br>
-                        quality in planning & design</dd>
-                </dl>
-                <dl class="txt">
-                    <dt>Xquisite Creativity</dt>
-                    <dd>out-of-the-box<br>
-                        creativity to fulfill needs</dd>
-                </dl>
-                <dl class="txt">
-                    <dt>Well-Xperienced</dt>
-                    <dd>various experience<br>
-                        in diverse fields</dd>
-                </dl>
-            </div>
-        
-    </div>
-    
-    <div class="section service" id="section2">
-        <div class="account">
-            <div class="left">
-            <p class="ani__text">Account</p>
-            <ul class="ani__text">
-                <li>Communication Planning</li>
-                <li>Concept Development</li>
-                <li>Strategy Development</li>
-            </ul>
-        </div>
-            <img src="images/service_account.png" />
-        </div>
-        <div class="creative">
-            <div class="left">
-                <p class="ani__text">Creative</p>
-                <ul class="ani__text">
-                    <li>POP &middot; POSM</li>
-                    <li>Event &middot; Promotion</li>
-                    <li>Shopper Marketing</li>
-                </ul>
-            </div>
-            <img src="images/service_creative.png" />
-        </div>
-    </div>
-
-    <div class="section width" id="section3">
-        <p class="title ani__text">DX with</p>
-            <ul class="ani__text">
-                <li><img src="images/client_logo_01.png" alt=""></li>
-                <li><img src="images/client_logo_02.png" alt=""></li>
-                <li><img src="images/client_logo_03.png" alt=""></li>
-                <li><img src="images/client_logo_04.png" alt=""></li>
-                <li><img src="images/client_logo_05.png" alt=""></li>
-                <li><img src="images/client_logo_06.png" alt=""></li>
-                <li><img src="images/client_logo_07.png" alt=""></li>
-                <li><img src="images/client_logo_08.png" alt=""></li>
-                <li><img src="images/client_logo_09.png" alt=""></li>
-                <li><img src="images/client_logo_10.png" alt=""></li>
-                <li><img src="images/client_logo_11.png" alt=""></li>
-                <li><img src="images/client_logo_12.png" alt=""></li>
-                <li><img src="images/client_logo_13.png" alt=""></li>
-                <li><img src="images/client_logo_14.png" alt=""></li>
-                <li><img src="images/client_logo_15.png" alt=""></li>
-                <li><img src="images/client_logo_16.png" alt=""></li>
-                <li><img src="images/client_logo_17.png" alt=""></li>
-                <li><img src="images/client_logo_18.png" alt=""></li>
-            </ul>
-    </div>
-    <div class="section portfolio" id="section4">
-        <p class="title ani__text">Experienced with</p>
-        <ul class="category ani__text">
-            <li class="active"><a href="#POP-POSM">POP &middot; POSM</a></li>
-            <li><a href="#KEY-VISUAL">KEY VISUAL</a></li>
-            <li><a href="#PACKAGE">PACKAGE</a></li>
-            <li><a href="#PROMOTION">EVENT &middot; PROMOTION</a></li>
-            <li><a href="#POP-UP">POP-UP STORE</a></li>
-            <li><a href="#WEB">WEB</a></li>
-            <li><a href="#VMD">VMD</a></li>
-        </ul>
-        <div class="category-list active" id="POP-POSM">
-            <div class="list">
-                <ul>
-                    <li class="ani__text">
-                        <a href="#" class="img-box"><img src="images/POP_POSM_01.png" /></a>
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-                        </dl>
-                    </li>
-                    <li class="ani__text">
-                        <a href="#" class="img-box">
-                            <div class="img-box"><img src="images/POP_POSM_02.png" /></div>
-                        </a>
-                        
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li class="ani__text">
-                        <a href="images/POP_POSM_03.png">
-                            <div class="img-box"><img src="images/POP_POSM_03.png" /></div>
-                        </a>
-                        
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li class="ani__text">
-                        <a href="images/POP_POSM_04.png">
-                            <div class="img-box"><img src="images/POP_POSM_04.png" /></div>
-                        </a>
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li class="ani__text">
-                        <a href="images/POP_POSM_05.png">
-                            <div class="img-box"><img src="images/POP_POSM_05.png" /></div>
-                        </a>
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li class="ani__text">
-                        <a href="images/POP_POSM_06.png">
-                            <div class="img-box"><img src="images/POP_POSM_06.png" /></div>
-                        </a>
-                        
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li class="ani__text">
-                        <a href="images/POP_POSM_07.png">
-                            <div class="img-box"><img src="images/POP_POSM_07.png" /></div>
-                        </a>
-                        
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li class="ani__text">
-                        <a href="images/POP_POSM_08.png">
-                            <div class="img-box"><img src="images/POP_POSM_08.png" /></div>
-                        </a>
-                        
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li class="ani__text">
-                        <a href="images/POP_POSM_09.png">
-                            <div class="img-box"><img src="images/POP_POSM_09.png" /></div>
-                        </a>
-                        
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
-        <div class="category-list" id="KEY-VISUAL">
-            <div class="list">
-                <ul>
-                    <li>
-                        <img src="images/POP_POSM_01.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_02.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_03.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_04.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_05.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_06.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_07.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_08.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_09.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
-        <div class="category-list" id="PACKAGE">
-            <div class="list">
-                <ul>
-                    <li>
-                        <img src="images/POP_POSM_01.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_02.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_03.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_04.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_05.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_06.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_07.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_08.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_09.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="category-list" id="PROMOTION">
-            <div class="list">
-                <ul>
-                    <li>
-                        <img src="images/POP_POSM_01.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_02.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_03.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_04.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_05.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_06.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_07.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_08.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_09.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
-        <div class="category-list" id="POP-UP">
-            <div class="list">
-                <ul>
-                    <li>
-                        <img src="images/POP_POSM_01.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_02.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_03.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_04.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_05.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_06.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_07.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_08.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_09.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
-        <div class="category-list" id="WEB">
-            <div class="list">
-                <ul>
-                    <li>
-                        <img src="images/POP_POSM_01.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_02.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_03.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_04.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_05.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_06.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_07.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_08.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_09.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
-        <div class="category-list" id="VMD">
-            <div class="list">
-                <ul>
-                    <li>
-                        <img src="images/POP_POSM_01.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                        
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_02.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_03.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_04.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_05.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_06.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_07.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_08.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                    <li>
-                        <img src="images/POP_POSM_09.png" />
-                        <dl>
-                            <dt>Titleist</dt>
-                            <dd>Team Titleist Championship</dd>
-<div class="img-overlay">더보기</div>
-                        </dl>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-    </div>
-    <div class="section year" id="section5">
-        <dl class="ani__text">
-            <dt>12</dt>
-            <dd>Years Of Experiance</dd>
-        </dl>
-        <dl class="ani__text">
-            <dt>162</dt>
-            <dd>Success Project</dd>
-        </dl>
-        <dl class="ani__text">
-            <dt>15</dt>
-            <dd>Active Project</dd>
-        </dl>
-        <dl class="ani__text">
-            <dt>95</dt>
-            <dd>Happy Customers</dd>
-        </dl>
-        <div class="text ani__text">
-            DX
-        </div>
-    </div>
-    
-    <div class="section contact" id="section6">
-        <p class="title ani__text">Contact</p>
-        <p class="description ani__text">당신의 브랜드 가치를 극대화할 광고 분야 의 최고 전문가, DX를 만나보세요.</p>
-        <div class="btn-wrap">
-            <a href="#" class="btn ani__text"><img src="images/btn.svg">프로젝트 문의</a>
-            <a href="#" class="btn ani__text"><img src="images/btn.svg">채용 문의</a>
-        </div>
-    </div>
-
-    <footer>
-        <div class="left">
-            <p><img src="images/logo.png" ></p>
-            <ul>
-                <li><a href="#">Company</a></li>
-                <li><a href="#">service</a></li>
-                <li><a href="#">portfolio</a></li>
-                <li><a href="#">contact</a></li>
+                <li><a href="#section1">Company</a></li>
+                <li><a href="#section2">service</a></li>
+                <li><a href="#section4">portfolio</a></li>
+                <li><a href="#section6">contact</a></li>
             </ul>
         </div>
         <div class="right">
@@ -1573,45 +798,53 @@
         </div>
     </footer>
 
-
-    <!-- layer popup -->
-    <div class="dim-layer" id="popup1">
-      <div class="dimBg"></div>
-      <div class="pop-layer">
-        <div class="pop-container">
-    
-          <span class="popup-close btn-layerClose"></span>
-    
-          <div class="pop-contns-box">
-            <div class="box-inner">
-              <div class="pop-box">
-                <div class="pop-con">
-                    <div class="text-wrap">
-                        <p class="category">POP &middot; POSM</p>
-                        <p class="title">Titleist</p>
-                        <p class="description">Team Titleist Championship</p>
-                    </div>
-                    <div class="pop-img-wrap">
-                        <img src="images/POP_POSM_0101.png" />
-                        <img src="images/POP_POSM_0102.png" />
-                        <img src="images/POP_POSM_0103.png" />
-                    </div>
+     <!-- layer popup -->
+     <div class="dim-layer" id="popup1">
+        <div class="dimBg"></div>
+        <div class="pop-layer">
+          <div class="pop-container">
+      
+            <span class="popup-close btn-layerClose"></span>
+      
+            <div class="pop-contns-box">
+              <div class="box-inner">
+                <div class="pop-box">
+                  <div class="pop-con">
+                      <div class="text-wrap">
+                          <p class="category">POP &middot; POSM</p>
+                          <p class="title">Titleist</p>
+                          <p class="description">Team Titleist Championship</p>
+                      </div>
+                      <div class="pop-img-wrap">
+                          <img src="images/POP_POSM_0101.png" />
+                          <img src="images/POP_POSM_0102.png" />
+                          <img src="images/POP_POSM_0103.png" />
+                      </div>
+                  </div>
+                  <!-- //팝업내용-->
+      
                 </div>
-                <!-- //팝업내용-->
-    
               </div>
+              <!-- <div class="pop-button">버튼</div> -->
             </div>
-            <!-- <div class="pop-button">버튼</div> -->
+            <!--// content-->
+      
           </div>
-          <!--// content-->
-    
         </div>
       </div>
-    </div>
-    <!-- //layer popup -->
+      <!-- //layer popup -->
+
+
+      <div class="progress-wrap">
+		<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+		</svg>
+	</div>
+
     <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars/js/OverlayScrollbars.min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>  
 <!--//여기까지 -->
+
     
 </body>
 </html>

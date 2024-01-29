@@ -120,7 +120,21 @@ ScrollTrigger.create({
 });
 
 
+ScrollTrigger.create({
+  trigger: '.section.service',
+  start: 'top top',
+  pin: '.section.service .pin-box', 
+  endTrigger:'.section.service',
+  end:'bottom bottom'
+});
 
+ScrollTrigger.create({
+  trigger: '.section.service .account',
+  start: 'bottom bottom',
+  pin: true, // 현재 요소를 고정합니다.
+  endTrigger:'.section.service',
+  end:'top +=40%'
+});
 
 $(".popup-open").click(function () {
   var $href = $(this).attr("href");
@@ -216,30 +230,30 @@ function layer_popup(el) {
 
 
 
-function wrapEachCharacter(textContainer) {
-  const characters = textContainer.textContent.split('');
-  const wrappedHtml = characters.map(char => {
-      return char.trim() === '' ? ' ' : 
-          `<div style="position: relative; display: inline-block; opacity: 0;">${char}</div>`;
-  }).join('');
+// function wrapEachCharacter(textContainer) {
+//   const characters = textContainer.textContent.split('');
+//   const wrappedHtml = characters.map(char => {
+//       return char.trim() === '' ? ' ' : 
+//           `<div style="position: relative; display: inline-block; opacity: 0;">${char}</div>`;
+//   }).join('');
 
-  textContainer.innerHTML = `<div style="position: relative; display: inline-block;">${wrappedHtml}</div>`;
-}
+//   textContainer.innerHTML = `<div style="position: relative; display: inline-block;">${wrappedHtml}</div>`;
+// }
 
 
-function animateCharacters(sentenceElement) {
-  gsap.fromTo(sentenceElement.querySelectorAll('div'), {
-      opacity: 0,
-      transform: "translateY(50%)"
-  }, {
-      opacity: 1,
-      transform: "translateY(0%)",
-      delay: gsap.utils.mapRange(0, sentenceElement.textContent.length, 0, 0.3),
-      duration: 0.7,
-      stagger: 0.05,
-      ease: 'power2.out'
-  });
-}
+// function animateCharacters(sentenceElement) {
+//   gsap.fromTo(sentenceElement.querySelectorAll('div'), {
+//       opacity: 0,
+//       transform: "translateY(50%)"
+//   }, {
+//       opacity: 1,
+//       transform: "translateY(0%)",
+//       delay: gsap.utils.mapRange(0, sentenceElement.textContent.length, 0, 0.3),
+//       duration: 0.7,
+//       stagger: 0.05,
+//       ease: 'power2.out'
+//   });
+// }
 
 
 
@@ -278,4 +292,72 @@ document.querySelectorAll('.sentence.filled, .sentence.line').forEach(sentenceEl
 
 // .project-desc에 대한 이벤트 리스너 추가
 document.querySelectorAll('.project-desc').forEach(addAnimationToProjectDesc);
+$(".counterUp_02").counterUp({
+  delay: 2,
+  time: 800
+});
+$(".counterUp").counterUp({
+  delay: 2,
+  time: 500
+});
+
+// $(document).ready(function () {
+//   $('.counterUp').counterUp({
+//       time: 500
+//   });
+
+//   $('.counterUp_02').counterUp({
+//       delay: 10,
+//       time: 2000
+//   });
+// });
+
+
+(function ($) {
+  "use strict";
+
+  //Switch dark/light
+
+
+  $(document).ready(function () {
+    "use strict";
+
+    //Scroll back to top
+
+    var progressPath = document.querySelector(".progress-wrap path");
+    var pathLength = progressPath.getTotalLength();
+    progressPath.style.transition = progressPath.style.WebkitTransition =
+      "none";
+    progressPath.style.strokeDasharray = pathLength + " " + pathLength;
+    progressPath.style.strokeDashoffset = pathLength;
+    progressPath.getBoundingClientRect();
+    progressPath.style.transition = progressPath.style.WebkitTransition =
+      "stroke-dashoffset 10ms linear";
+    var updateProgress = function () {
+      var scroll = $(window).scrollTop();
+      var height = $(document).height() - $(window).height();
+      var progress = pathLength - (scroll * pathLength) / height;
+      progressPath.style.strokeDashoffset = progress;
+    };
+    updateProgress();
+    $(window).scroll(updateProgress);
+    var offset = 50;
+    var duration = 550;
+    jQuery(window).on("scroll", function () {
+      if (jQuery(this).scrollTop() > offset) {
+        jQuery(".progress-wrap").addClass("active-progress");
+      } else {
+        jQuery(".progress-wrap").removeClass("active-progress");
+      }
+    });
+    jQuery(".progress-wrap").on("click", function (event) {
+      event.preventDefault();
+      jQuery("html, body").animate({ scrollTop: 0 }, duration);
+      return false;
+    });
+  });
+})(jQuery);
+
+
+
 
