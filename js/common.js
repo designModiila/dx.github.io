@@ -77,8 +77,8 @@ ScrollTrigger.create({
   end:'bottom bottom'
 })
 
-// 남색 상자 커지기
-let wh = $(window).height()
+
+let wh2 = $(window).height()
 gsap.to('.section.about .con .bg',{
   width:'100%',
   height:'100%',
@@ -86,18 +86,20 @@ gsap.to('.section.about .con .bg',{
   scrollTrigger:{
       trigger:'.section.about',
       start:'top top',
-      end: `${wh}px`,
+      end: `${wh2}px`,
       scrub:1,
   }
 })
-
 
 ScrollTrigger.create({
   trigger:'.section.about',
   start:'bottom bottom',
   pin:'.section.about .right',
-  end:'bottom bottom'
+  end:'top  +=40%',
+  
 })
+
+
 
 // 텍스트 올라가면서 addClass
 const s3_right_txt = gsap.utils.toArray('.section.about .right .txt');
@@ -105,22 +107,49 @@ s3_right_txt.forEach((item,i)=>{
   ScrollTrigger.create({
       trigger:item,
       toggleClass:'on',
-      start:"top 60%",
+      start:"top 85%"
   });
+});
+
+ScrollTrigger.create({
+  trigger: '.section.about .right',
+  start: 'bottom bottom',
+  pin: true, // 현재 요소를 고정합니다.
+  endTrigger:'.section.about',
+  end:'top +=40%'
 });
 
 
 
 
+$(".popup-open").click(function () {
+  var $href = $(this).attr("href");
+  layer_popup($href);
+});
+function layer_popup(el) {
+  var $el = $(el); //레이어의 id를 $el 변수에 저장
+  $el.fadeIn();
+
+  var $elWidth = ~~$el.outerWidth(),
+    $elHeight = ~~$el.outerHeight(),
+    docWidth = $(document).width(),
+    docHeight = $(document).height();
+
+  $el.find(".popup-close").click(function () {
+    $(this).parents(".dim-layer").fadeOut();
+    return false;
+  });
+
+  $(".layer .dimBg").click(function () {
+    $(".dim-layer").fadeOut();
+    return false;
+  });
+}
 
 
 
-// document.querySelectorAll(".myElement").forEach(element => {
-//   gsap.to(element, { duration: 1, opacity: 0 });
-// });
-
-// Gallery image hover
-// $( ".category-list .list ul li" ).hover(
+// // Gallery image hover
+// $( ".list ul li" ).hover(
 //   function() {
 //     $(this).find(".img-overlay").animate({opacity: 1}, 600);
 //   }, function() {
@@ -128,80 +157,125 @@ s3_right_txt.forEach((item,i)=>{
 //   }
 // );
 
-// Lightbox
-var $overlay = $('<div id="overlay"></div>');
-var $image = $("<img>");
-var $prevButton = $('<div id="prevButton"><i class="fa fa-chevron-left"></i></div>');
-var $nextButton = $('<div id="nextButton"><i class="fa fa-chevron-right"></i></div>');
-var $exitButton = $('<div id="exitButton"><i class="fa fa-times"></i></div>');
 
-// Add overlay
-$overlay.append($image).prepend($prevButton).append($nextButton).append($exitButton);
-$(".section.Portfoli").append($overlay);
+// // Lightbox
+// var $overlay = $('<div id="overlay"></div>');
+// var $image = $("<img>");
+// var $prevButton = $('<div id="prevButton">이전</div>');
+// var $nextButton = $('<div id="nextButton">다음</div>');
+// var $exitButton = $('<div id="exitButton"></div>');
+// var imageLocation = $('.img-responsive').attr("src");
 
-// Hide overlay on default
-$overlay.hide();
+// // Add overlay
+// $overlay.append($image).prepend($prevButton).append($nextButton).append($exitButton);
+// $(".portfolio").append($overlay);
 
-// When an image is clicked
-$(".img-overlay").click(function(event) {
-  // Prevents default behavior
-  event.preventDefault();
-  // Adds href attribute to variable
-  var imageLocation = $(this).prev().attr("href");
-  // Add the image src to $image
-  $image.attr("src", imageLocation);
-  // Fade in the overlay
-  $overlay.fadeIn("slow");
+
+// $overlay.hide();
+
+
+// $(".img-overlay").click(function(event) {
+ 
+//   event.preventDefault();
+//   var imageLocation = $('.category-list img').attr("src");
+
+//   $image.attr("src", imageLocation);
+//   $overlay.fadeIn("slow");
+// });
+
+// $overlay.click(function() {
+//   $(this).fadeOut("slow");
+// });
+
+// $nextButton.click(function(event) {
+//   $("#overlay img").hide();
+//   var $currentImgSrc = $("#overlay img").attr("src");
+//     var $currentImg = $('.category-list img[src="' + $currentImgSrc + '"]');
+//    var $nextImg = $($currentImg.closest(".image").next().find("img"));
+//     var $images = $(".category-list img");
+//    if ($nextImg.length > 0) { 
+//        $("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(800);
+//   } else {
+//       $("#overlay img").attr("src", $($images[0]).attr("src")).fadeIn(800);
+//   }
+//   event.stopPropagation();
+// });
+
+// $prevButton.click(function(event) {
+//   $("#overlay img").hide();
+//   var $currentImgSrc = $("#overlay img").attr("src");
+//     var $currentImg = $('.category-list img[src="' + $currentImgSrc + '"]');
+//     var $nextImg = $($currentImg.closest(".image").prev().find("img"));
+//     $("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(800);
+//     event.stopPropagation();
+// });
+
+// $exitButton.click(function() {
+//   $("#overlay").fadeOut("slow");
+// });
+
+
+
+function wrapEachCharacter(textContainer) {
+  const characters = textContainer.textContent.split('');
+  const wrappedHtml = characters.map(char => {
+      return char.trim() === '' ? ' ' : 
+          `<div style="position: relative; display: inline-block; opacity: 0;">${char}</div>`;
+  }).join('');
+
+  textContainer.innerHTML = `<div style="position: relative; display: inline-block;">${wrappedHtml}</div>`;
+}
+
+
+function animateCharacters(sentenceElement) {
+  gsap.fromTo(sentenceElement.querySelectorAll('div'), {
+      opacity: 0,
+      transform: "translateY(50%)"
+  }, {
+      opacity: 1,
+      transform: "translateY(0%)",
+      delay: gsap.utils.mapRange(0, sentenceElement.textContent.length, 0, 0.3),
+      duration: 0.7,
+      stagger: 0.05,
+      ease: 'power2.out'
+  });
+}
+
+
+
+
+function addAnimationToProjectDesc(projectDesc) {
+  projectDesc.addEventListener('mouseenter', (event) => {
+      applyAnimation(projectDesc, event, true);
+  });
+
+  projectDesc.addEventListener('mouseleave', (event) => {
+      applyAnimation(projectDesc, event, false);
+  });
+}
+
+function applyAnimation(projectDesc, event, isEntering) {
+  projectDesc.classList.toggle('active', isEntering);
+  const titleSpan = projectDesc.querySelector('.project-title span');
+  const filled = projectDesc.querySelector('.project-title .filled');
+  const rect = titleSpan.getBoundingClientRect();
+  const xPercent = (event.clientX - rect.left) / rect.width * 100;
+  const yPercent = (event.clientY - rect.top) / rect.height * 100;
+
+  gsap.killTweensOf(filled);
+  gsap.to(filled, {
+      clipPath: `circle(${isEntering ? '100vw' : '0vw'} at ${xPercent}% ${yPercent}%)`,
+      duration: isEntering ? 1.25 : 0.6,
+      ease: isEntering ? "power2.inOut" : "power2.out"
+  });
+}
+
+// 글자가 순차적으로 나타나는 애니메이션 적용
+document.querySelectorAll('.sentence.filled, .sentence.line').forEach(sentenceElement => {
+  wrapEachCharacter(sentenceElement);
+  animateCharacters(sentenceElement);
 });
 
-// When the overlay is clicked
-$overlay.click(function() {
-  // Fade out the overlay
-  $(this).fadeOut("slow");
-});
+// .project-desc에 대한 이벤트 리스너 추가
+document.querySelectorAll('.project-desc').forEach(addAnimationToProjectDesc);
 
-// When next button is clicked
-$nextButton.click(function(event) {
-  // Hide the current image
-  $("#overlay img").hide();
-  // Overlay image location
-  var $currentImgSrc = $("#overlay img").attr("src");
-  // Image with matching location of the overlay image
-  var $currentImg = $('.section.Portfolio img[src="' + $currentImgSrc + '"]');
-  // Finds the next image
-  var $nextImg = $($currentImg.closest(".image").next().find("img"));
-  // All of the images in the gallery
-  var $images = $(".section.Portfolio img");
-  // If there is a next image
-  if ($nextImg.length > 0) { 
-    // Fade in the next image
-    $("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(800);
-  } else {
-    // Otherwise fade in the first image
-    $("#overlay img").attr("src", $($images[0]).attr("src")).fadeIn(800);
-  }
-  // Prevents overlay from being hidden
-  event.stopPropagation();
-});
-
-// When previous button is clicked
-$prevButton.click(function(event) {
-  // Hide the current image
-  $("#overlay img").hide();
-  // Overlay image location
-  var $currentImgSrc = $("#overlay img").attr("src");
-  // Image with matching location of the overlay image
-  var $currentImg = $('.section.Portfolio img[src="' + $currentImgSrc + '"]');
-  // Finds the next image
-  var $nextImg = $($currentImg.closest(".image").prev().find("img"));
-  // Fade in the next image
-  $("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(800);
-  // Prevents overlay from being hidden
-  event.stopPropagation();
-});
-
-// When the exit button is clicked
-$exitButton.click(function() {
-  // Fade out the overlay
-  $("#overlay").fadeOut("slow");
-});

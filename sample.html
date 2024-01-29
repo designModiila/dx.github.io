@@ -161,50 +161,6 @@ body {background: #000; font-family: notosans;}
     </div>
        
         <script>
-// function wrapEachCharacter(textContainer) {
-//     const characters = textContainer.textContent.split('');
-//     const wrappedHtml = characters.map(char => {
-//         return char.trim() === '' ? ' ' : 
-//             `<div style="position: relative; display: inline-block; transform: translate(0px, 0px); opacity: 1;">${char}</div>`;
-//     }).join('');
-
-//     textContainer.innerHTML = `<div style="position: relative; display: inline-block;">${wrappedHtml}</div>`;
-// }
-
-
-
-// function addAnimationToProjectDesc(projectDesc) {
-//     projectDesc.addEventListener('mouseenter', (event) => {
-//         applyAnimation(projectDesc, event, true);
-//     });
-
-//     projectDesc.addEventListener('mouseleave', (event) => {
-//         applyAnimation(projectDesc, event, false);
-//     });
-// }
-
-// function applyAnimation(projectDesc, event, isEntering) {
-//     projectDesc.classList.toggle('active', isEntering);
-//     const titleSpan = projectDesc.querySelector('.project-title span');
-//     const filled = projectDesc.querySelector('.project-title .filled');
-//     const rect = titleSpan.getBoundingClientRect();
-//     const xPercent = (event.clientX - rect.left) / rect.width * 100;
-//     const yPercent = (event.clientY - rect.top) / rect.height * 100;
-
-//     gsap.killTweensOf(filled);
-//     gsap.to(filled, {
-//         clipPath: `circle(${isEntering ? '100vw' : '0vw'} at ${xPercent}% ${yPercent}%)`,
-//         duration: isEntering ? 1.25 : 0.6,
-//         ease: isEntering ? "power2.inOut" : "power2.out"
-//     });
-// }
-
-// document.querySelectorAll('.project-desc').forEach((projectDesc) => {
-//     projectDesc.querySelectorAll('.sentence.filled, .sentence.line').forEach(wrapEachCharacter);
-//     addAnimationToProjectDesc(projectDesc);
-// });
-
-// Functions ya and va remain unchanged
 function wrapEachCharacter(textContainer) {
     const characters = textContainer.textContent.split('');
     const wrappedHtml = characters.map(char => {
@@ -216,15 +172,6 @@ function wrapEachCharacter(textContainer) {
 }
 
 
-// function animateCharacters(sentenceElement) {
-//     gsap.to(sentenceElement.querySelectorAll('div'), {
-//         opacity: 1,
-//         delay: gsap.utils.mapRange(0, sentenceElement.textContent.length, 0, 0.5),
-//         duration: 0.6,
-//         stagger: 0.05,
-//         ease: 'power2.out'
-//     });
-// }
 function animateCharacters(sentenceElement) {
     gsap.fromTo(sentenceElement.querySelectorAll('div'), {
         opacity: 0,
