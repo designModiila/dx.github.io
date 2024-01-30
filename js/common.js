@@ -136,10 +136,17 @@ ScrollTrigger.create({
   end:'top +=40%'
 });
 
-$(".popup-open").click(function () {
-  var $href = $(this).attr("href");
+// $(".popup-open").click(function () {
+//   var $href = $(this).attr("href");
+//   layer_popup($href);
+// });
+$(".popup-open").click(function(event) {
+  event.preventDefault(); // Prevent default anchor behavior
+  var $href = $(this).data("popup-target"); // Use data attribute to target the popup
   layer_popup($href);
+  window.lastFocusedElement = $(this); // Optional: Remember the trigger element
 });
+
 function layer_popup(el) {
   var $el = $(el); //레이어의 id를 $el 변수에 저장
   $el.fadeIn();
@@ -149,13 +156,28 @@ function layer_popup(el) {
     docWidth = $(document).width(),
     docHeight = $(document).height();
 
-  $el.find(".popup-close").click(function () {
-    $(this).parents(".dim-layer").fadeOut();
+  // $el.find(".popup-close").click(function () {
+  //   $(this).parents(".dim-layer").fadeOut();
+  //   return false;
+  // });
+
+  // $(".layer .dimBg").click(function () {
+  //   $(".dim-layer").fadeOut();
+  //   return false;
+  // });
+  $el.find(".popup-close").click(function(event) {
+    event.preventDefault();
+    $el.fadeOut();
+    // Optional: Return focus to the element that opened the popup
+    if (window.lastFocusedElement) {
+      window.lastFocusedElement.focus();
+    }
     return false;
   });
 
-  $(".layer .dimBg").click(function () {
-    $(".dim-layer").fadeOut();
+  $(".layer .dimBg").click(function(event) {
+    event.preventDefault();
+    $el.fadeOut();
     return false;
   });
 }
