@@ -40,7 +40,7 @@ header.visual-active .svg-logo-color,
 header.about-active .svg-logo-color {
   fill: var(--svg-color);
 }
-
+header.about-text-active .svg-logo-color,
 header.service-active .svg-logo-color,
 header.with-active .svg-logo-color,
 header.portfolio-active .svg-logo-color,
@@ -69,7 +69,7 @@ header ul li a {
 header.about-active ul li a {
   fill: var(--svg-color);
 }
-
+header.about-text-active ul li a,
 header.service-active ul li a,
 header.with-active ul li a,
 header.portfolio-active ul li a,
@@ -629,6 +629,7 @@ footer .right .copy {
 }
 .pop-con .pop-img-wrap {
   width: fit-content;
+  max-width: calc(100% - 240px);
 }
 .dim-layer {
   display: none;
@@ -693,158 +694,6 @@ footer .right .copy {
   border-radius: 5px; */
 }
 
-/* 
-#gallery {
-  padding-top: 40px;
-}
-@media screen and (min-width: 991px) {
-  #gallery {
-    padding: 60px 30px 0 30px;
-  }
-} */
-/* 
-.list ul li {
-  position: relative;
-  margin-top: 15px;
-}
-.list ul li img {
-  width: 100%;
-}
-
-.img-overlay {
-  background: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-}
-.img-overlay i {
-  color: #fff;
-  font-size: 3em;
-}
-
-#overlay {
-  background: #1c1b1b;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-#overlay img {
-  margin: 0;
-  width: 80%;
-  height: auto;
-  -o-object-fit: contain;
-  object-fit: contain;
-  padding: 5%;
-}
-@media screen and (min-width: 768px) {
-  #overlay img {
-    width: 60%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  #overlay img {
-    width: 50%;
-  }
-}
-
-#nextButton {
-  color: #fff;
-  font-size: 2em;
-  transition: opacity 0.8s;
-}
-#nextButton:hover {
-  opacity: 0.7;
-}
-@media screen and (min-width: 768px) {
-  #nextButton {
-    font-size: 3em;
-  }
-}
-
-#prevButton {
-  color: #fff;
-  font-size: 2em;
-  transition: opacity 0.8s;
-}
-#prevButton:hover {
-  opacity: 0.7;
-}
-@media screen and (min-width: 768px) {
-  #prevButton {
-    font-size: 3em;
-  }
-}
-
-#exitButton {
-  color: #fff;
-  font-size: 2em;
-  transition: opacity 0.8s;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-#exitButton:hover {
-  opacity: 0.7;
-}
-@media screen and (min-width: 768px) {
-  #exitButton {
-    font-size: 3em;
-  }
-}
-
-.category-list .list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 100px 63px;
-}
-
-.category-list .list dl {
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.category-list .list dl dt {
-  color: #1d1d1f;
-
-  font-family: Pretendard;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-}
-.category-list .list dl dd {
-  color: #86868b;
-
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-#exitButton {
-  background: url(../images/btn_close.png) no-repeat center center;
-  width: 52px;
-  height: 52px;
-} */
-
 .project-desc {
   position: absolute;
   left: 50%;
@@ -852,15 +701,8 @@ footer .right .copy {
   transform: translate(-50%, -50%);
   width: 80vw;
   display: block;
-}
-
-.project-desc {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 80vw;
-  display: block;
+  z-index: 100;
+  min-height: 350px;
 }
 .project-desc:after {
   position: absolute;
@@ -871,12 +713,17 @@ footer .right .copy {
   content: "";
 }
 .project-desc .project-title {
-  font-size: 96px;
-  font-size: max(5rem, 5vw);
+  font-size: 250px;
   font-weight: 700;
   line-height: 1.4;
   text-align: center;
-  color: #fff;
+  color: #000;
+  position: absolute;
+  left: 52%;
+  top: 50%;
+  transform: translate(-52%, -50%) !important;
+  z-index: -1;
+  padding-bottom: 122px;
 }
 .project-desc .project-title > span {
   position: relative;
@@ -885,7 +732,7 @@ footer .right .copy {
 .project-desc .project-title .sentence {
   display: inline-block;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-color: #000;
   -webkit-text-fill-color: transparent;
   position: relative;
   display: inline-flex;
@@ -901,7 +748,7 @@ footer .right .copy {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-text-fill-color: #fff;
+  -webkit-text-fill-color: #000;
   clip-path: circle(0vw at 50% 50%);
 }
 .project-desc .project-title .sentence div {
@@ -909,55 +756,6 @@ footer .right .copy {
   transform: translateZ(0);
   filter: grayscale(0);
 }
-.project-desc .btn-show {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 100%;
-  margin-top: 0.6666666667em;
-  color: #fff;
-  font-size: 30px;
-  font-weight: 300;
-  display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: max(1.75rem, 1.6vw);
-}
-@media screen and (max-width: 1000px) {
-  .project-desc .btn-show {
-    font-size: max(1.5rem, 2.8vw);
-  }
-}
-@media screen and (max-width: 500px) {
-  .project-desc .btn-show {
-    font-size: 4.8vw;
-  }
-}
-.project-desc .btn-show span {
-  padding-bottom: 0.375em;
-  display: block;
-  position: relative;
-  transform: translateY(100%);
-  transition: transform 600ms cubic-bezier(0.23, 1, 0.32, 1);
-}
-.project-desc .btn-show:after {
-  border-top: 1px solid #fff;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  content: "";
-  bottom: 0;
-  width: 0%;
-  transition: width 400ms cubic-bezier(0.86, 0, 0.07, 1);
-}
-.project-desc.active .btn-show span {
-  transform: translateY(0);
-  transition-delay: 300ms;
-}
-.project-desc.active .btn-show:after {
-  width: 100%;
-}
-
 .sentence.filled span {
   transition: clip-path 0.5s ease;
 }
@@ -980,16 +778,6 @@ footer .right .copy {
   --black-light: #424455;
 }
 
-body.light {
-  color: var(--black-light);
-}
-
-body.light h1 {
-  color: var(--black);
-}
-body.light {
-  background-color: var(--white);
-}
 @-webkit-keyframes border-transform {
   0%,
   100% {
@@ -1052,7 +840,7 @@ body.light {
   display: block;
   border-radius: 50px;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.2);
-  z-index: 10000;
+  z-index: 999;
   opacity: 0;
   visibility: hidden;
   transform: translateY(15px);

@@ -183,102 +183,30 @@ function layer_popup(el) {
 }
 
 
+function wrapEachCharacter(textContainer) {
+  const characters = textContainer.textContent.split('');
+  const wrappedHtml = characters.map(char => {
+      return char.trim() === '' ? ' ' : 
+          `<div style="position: relative; display: inline-block; opacity: 0;">${char}</div>`;
+  }).join('');
 
-// // Gallery image hover
-// $( ".list ul li" ).hover(
-//   function() {
-//     $(this).find(".img-overlay").animate({opacity: 1}, 600);
-//   }, function() {
-//     $(this).find(".img-overlay").animate({opacity: 0}, 600);
-//   }
-// );
-
-
-// // Lightbox
-// var $overlay = $('<div id="overlay"></div>');
-// var $image = $("<img>");
-// var $prevButton = $('<div id="prevButton">이전</div>');
-// var $nextButton = $('<div id="nextButton">다음</div>');
-// var $exitButton = $('<div id="exitButton"></div>');
-// var imageLocation = $('.img-responsive').attr("src");
-
-// // Add overlay
-// $overlay.append($image).prepend($prevButton).append($nextButton).append($exitButton);
-// $(".portfolio").append($overlay);
+  textContainer.innerHTML = `<div style="position: relative; display: inline-block;">${wrappedHtml}</div>`;
+}
 
 
-// $overlay.hide();
-
-
-// $(".img-overlay").click(function(event) {
- 
-//   event.preventDefault();
-//   var imageLocation = $('.category-list img').attr("src");
-
-//   $image.attr("src", imageLocation);
-//   $overlay.fadeIn("slow");
-// });
-
-// $overlay.click(function() {
-//   $(this).fadeOut("slow");
-// });
-
-// $nextButton.click(function(event) {
-//   $("#overlay img").hide();
-//   var $currentImgSrc = $("#overlay img").attr("src");
-//     var $currentImg = $('.category-list img[src="' + $currentImgSrc + '"]');
-//    var $nextImg = $($currentImg.closest(".image").next().find("img"));
-//     var $images = $(".category-list img");
-//    if ($nextImg.length > 0) { 
-//        $("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(800);
-//   } else {
-//       $("#overlay img").attr("src", $($images[0]).attr("src")).fadeIn(800);
-//   }
-//   event.stopPropagation();
-// });
-
-// $prevButton.click(function(event) {
-//   $("#overlay img").hide();
-//   var $currentImgSrc = $("#overlay img").attr("src");
-//     var $currentImg = $('.category-list img[src="' + $currentImgSrc + '"]');
-//     var $nextImg = $($currentImg.closest(".image").prev().find("img"));
-//     $("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(800);
-//     event.stopPropagation();
-// });
-
-// $exitButton.click(function() {
-//   $("#overlay").fadeOut("slow");
-// });
-
-
-
-// function wrapEachCharacter(textContainer) {
-//   const characters = textContainer.textContent.split('');
-//   const wrappedHtml = characters.map(char => {
-//       return char.trim() === '' ? ' ' : 
-//           `<div style="position: relative; display: inline-block; opacity: 0;">${char}</div>`;
-//   }).join('');
-
-//   textContainer.innerHTML = `<div style="position: relative; display: inline-block;">${wrappedHtml}</div>`;
-// }
-
-
-// function animateCharacters(sentenceElement) {
-//   gsap.fromTo(sentenceElement.querySelectorAll('div'), {
-//       opacity: 0,
-//       transform: "translateY(50%)"
-//   }, {
-//       opacity: 1,
-//       transform: "translateY(0%)",
-//       delay: gsap.utils.mapRange(0, sentenceElement.textContent.length, 0, 0.3),
-//       duration: 0.7,
-//       stagger: 0.05,
-//       ease: 'power2.out'
-//   });
-// }
-
-
-
+function animateCharacters(sentenceElement) {
+  gsap.fromTo(sentenceElement.querySelectorAll('div'), {
+      opacity: 0,
+      transform: "translateY(50%)"
+  }, {
+      opacity: 1,
+      transform: "translateY(0%)",
+      delay: gsap.utils.mapRange(0, sentenceElement.textContent.length, 0, 0.3),
+      duration: 0.7,
+      stagger: 0.05,
+      ease: 'power2.out'
+  });
+}
 
 function addAnimationToProjectDesc(projectDesc) {
   projectDesc.addEventListener('mouseenter', (event) => {
@@ -314,6 +242,8 @@ document.querySelectorAll('.sentence.filled, .sentence.line').forEach(sentenceEl
 
 // .project-desc에 대한 이벤트 리스너 추가
 document.querySelectorAll('.project-desc').forEach(addAnimationToProjectDesc);
+
+
 $(".counterUp_02").counterUp({
   delay: 2,
   time: 800
@@ -323,16 +253,6 @@ $(".counterUp").counterUp({
   time: 500
 });
 
-// $(document).ready(function () {
-//   $('.counterUp').counterUp({
-//       time: 500
-//   });
-
-//   $('.counterUp_02').counterUp({
-//       delay: 10,
-//       time: 2000
-//   });
-// });
 
 
 (function ($) {
