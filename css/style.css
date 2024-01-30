@@ -34,12 +34,26 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-
+header .logo a {
+  width: 54px;
+  height: 28px;
+  display: inline-block;
+}
 header .svg-logo-color,
 header.visual-active .svg-logo-color,
 header.about-active .svg-logo-color {
   fill: var(--svg-color);
 }
+
+header.about-text-active,
+header.service-active,
+header.with-active,
+header.portfolio-active,
+header.year-active,
+header.contact-active {
+  background: #fff;
+}
+
 header.about-text-active .svg-logo-color,
 header.service-active .svg-logo-color,
 header.with-active .svg-logo-color,
@@ -854,11 +868,10 @@ footer .right .copy {
 }
 .progress-wrap::after {
   position: absolute;
-  font-family: "unicons";
-  content: "\e84b";
+  content: "TOP";
   text-align: center;
   line-height: 46px;
-  font-size: 24px;
+  font-size: 16px;
   color: var(--grey);
   left: 0;
   top: 0;
@@ -875,11 +888,10 @@ footer .right .copy {
 }
 .progress-wrap::before {
   position: absolute;
-  font-family: "unicons";
-  content: "\e84b";
+  content: "TOP";
   text-align: center;
   line-height: 46px;
-  font-size: 24px;
+  font-size: 16px;
   opacity: 0;
   background-image: linear-gradient(298deg, var(--red), var(--yellow));
   -webkit-background-clip: text;
@@ -926,8 +938,7 @@ footer .right .copy {
 }
 .circle:before {
   position: absolute;
-  font-family: "unicons";
-  content: "\eac1";
+  content: "TOP";
   top: 0;
   left: 0;
   z-index: 2;
@@ -943,8 +954,7 @@ footer .right .copy {
 }
 .circle:after {
   position: absolute;
-  font-family: "unicons";
-  content: "\eb8f";
+  content: "TOP";
   top: 0;
   left: 0;
   z-index: 2;
@@ -957,4 +967,8 @@ footer .right .copy {
   opacity: 0;
   -webkit-transition: all 300ms linear;
   transition: all 300ms linear;
+}
+
+a {
+  cursor: pointer;
 }

@@ -45,7 +45,7 @@ document.querySelectorAll(".section").forEach((section, index) => {
   // 텍스트 박스 애니메이션
   tl.fromTo(
     section.querySelectorAll(".ani__text"),
-    { opacity: 0, transform: "translateY(50%)" },
+    { opacity: 0, transform: "translateY(100%)" },
     { opacity: 1, transform: "translateY(0%)", delay: 0.3, duration: 0.7 },
     "show"
   );
