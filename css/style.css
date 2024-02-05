@@ -54,7 +54,7 @@ header.with-active,
 header.portfolio-active,
 header.year-active,
 header.contact-active {
-  background: #fff;
+  /* background: #fff; */
 }
 
 header.about-text-active .svg-logo-color,
