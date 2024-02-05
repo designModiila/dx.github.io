@@ -1,4 +1,4 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
       e.preventDefault();
 
@@ -130,21 +130,21 @@ ScrollTrigger.create({
 });
 
 
-ScrollTrigger.create({
-  trigger: '.section.service',
-  start: 'top top',
-  pin: '.section.service .pin-box', 
-  endTrigger:'.section.service',
-  end:'bottom bottom'
-});
+// ScrollTrigger.create({
+//   trigger: '.section.service',
+//   start: 'top top',
+//   pin: '.section.service .pin-box', 
+//   endTrigger:'.section.service',
+//   end:'bottom bottom'
+// });
 
-ScrollTrigger.create({
-  trigger: '.section.service .account',
-  start: 'bottom bottom',
-  pin: true, // 현재 요소를 고정합니다.
-  endTrigger:'.section.service',
-  end:'top +=40%'
-});
+// ScrollTrigger.create({
+//   trigger: '.section.service .account',
+//   start: 'bottom bottom',
+//   pin: true, // 현재 요소를 고정합니다.
+//   endTrigger:'.section.service',
+//   end:'top +=40%'
+// });
 
 // $(".popup-open").click(function () {
 //   var $href = $(this).attr("href");
@@ -203,6 +203,25 @@ function wrapEachCharacter(textContainer) {
   textContainer.innerHTML = `<div style="position: relative; display: inline-block;">${wrappedHtml}</div>`;
 }
 
+
+// 모든 .pin-box 내의 div 요소에 대해 애니메이션 적용
+gsap.utils.toArray(".pin-box > div").forEach((section, index) => {
+  let nextSection = section.nextElementSibling; // 다음 섹션
+  if (!nextSection) return; // 마지막 섹션인 경우 애니메이션 적용 안 함
+
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: "top top", // 현재 섹션의 상단이 viewport 상단에 도달했을 때 시작
+      end: () => `+=${nextSection.offsetHeight}`, // 다음 섹션의 높이만큼 스크롤됐을 때 종료
+      scrub: true, // 스크롤에 따라 애니메이션을 부드럽게 조정
+      pin: true, // 현재 섹션 고정
+      anticipatePin: 1, // 고정 전환을 미리 준비
+    }
+  })
+  .fromTo(section, { autoAlpha: 1, y: 0 }, { autoAlpha: 0, y: -50, ease: "none" }, 0)
+  .fromTo(nextSection, { y: 50, autoAlpha: 0 }, { y: 0, autoAlpha: 1, ease: "none" }, 0);
+});
 
 function animateCharacters(sentenceElement) {
   gsap.fromTo(sentenceElement.querySelectorAll('div'), {
@@ -312,4 +331,65 @@ $(".counterUp").counterUp({
 
 
 
+const image_wrap = gsap.utils.toArray(".image_wrap");
 
+let triggerElement = document.querySelector('.display_grid');
+//  let targetElement = $(".nav_logo");
+
+let tl = gsap.timeline({
+  // yes, we can add it to an entire timeline!
+
+  //  let targetElement = $(".nav_logo");
+  scrollTrigger: {
+    trigger: triggerElement,
+    pin: false,   // pin the trigger element while activelength
+    start: "top top", // when the top of the trigger hits the top of the viewport
+    end: "bottom bottom",
+    scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+    //markers: true,
+    onEnter: function() { console.log("onEnter") },
+    onUpdate: self => {
+
+    }
+  }
+});
+
+image_wrap.forEach((image_w, i) => {
+  /* "this" iterate elements */
+  /* section 1 */
+  if(i == 0){
+
+  }
+  if(i > 0){
+    tl.from(image_w, {autoAlpha: 0}) 
+  }
+  /* section 2 */
+  if((i+1) == 2){
+    // add animations and labels to the timeline
+
+  }
+});/* end for each */
+
+
+
+
+
+
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// 페이지가 로드될 때 첫 번째 탭을 자동으로 활성화
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementsByClassName("tablinks")[0].click();
+});

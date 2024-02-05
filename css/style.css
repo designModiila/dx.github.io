@@ -344,7 +344,7 @@ header.contact-active ul li a {
   margin: 58px 0 94px 0;
 }
 
-.portfolio .category li a {
+.portfolio .category li button.tablinks {
   color: #46464f;
 
   font-family: Pretendard;
@@ -354,17 +354,19 @@ header.contact-active ul li a {
   line-height: normal;
   opacity: 0.3;
 }
-.portfolio .category li a:hover,
-.portfolio .category li.active a {
+.portfolio .category li button.tablinks:hover,
+.portfolio .category li button.tablinks.active {
   opacity: 1;
 }
-.portfolio .category-list {
+/* .portfolio .category-list.tabcontent {
   display: none;
 }
-.portfolio .category-list.active {
+.portfolio .category-list.tabcontent.active {
   display: block;
+} */
+.portfolio .category-list.tabcontent {
+  display: none;
 }
-
 .portfolio .category-list li a .img-box {
   position: relative;
   width: 100%;
@@ -974,4 +976,90 @@ footer .right .copy {
 
 a {
   cursor: pointer;
+}
+
+.vh {
+  min-height: 100vh;
+}
+.fade {
+  opacity: 1;
+}
+
+.display_grid {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-columns: 1fr 2.5fr;
+}
+
+.image_wrap {
+  min-height: 100vh;
+  width: 100%;
+  /* The trick */
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  align-self: center;
+}
+.image_wrap > div {
+  width: 100%;
+  text-align: right;
+}
+.content {
+  height: 100%;
+  width: 100%;
+  align-self: start;
+}
+.box {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.justify_center {
+  justify-content: center;
+}
+
+.justify_center > div {
+  width: 100%;
+}
+
+.mobile_placeholder {
+  position: relative;
+  background: red;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .display_grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .mobile_placeholder {
+    display: block;
+  }
+
+  .image_wrap {
+    /* The trick */
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    text-align: center;
+    align-self: start;
+  }
+
+  .box {
+    height: 100%;
+    display: flex;
+    align-items: self-start;
+  }
+
+  .justify_center {
+    justify-content: center;
+  }
 }
