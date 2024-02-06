@@ -168,12 +168,16 @@ header.contact-active ul li a {
   font-weight: 700;
   line-height: normal;
 }
+.with {
+  padding: 0 160px 280px 160px;
+}
 .section.with .title {
   margin-bottom: 60px;
 }
 .about-text {
   padding: 280px 160px 70px 160px;
 }
+
 .about {
   width: 100%;
   height: 300vh;
@@ -292,7 +296,7 @@ header.contact-active ul li a {
   top: 200px;
 }
 .service {
-  padding-bottom: 0;
+  padding: 0 160px;
 }
 .service .pin-box {
   margin-bottom: 20px;
@@ -1016,6 +1020,8 @@ a {
   bottom: 0;
   text-align: center;
   align-self: center;
+  display: flex;
+  align-items: center;
 }
 .image_wrap > div {
   width: 100%;
@@ -1025,6 +1031,8 @@ a {
   height: 100%;
   width: 100%;
   align-self: start;
+  display: flex;
+  align-items: center;
 }
 /* .box {
   height: 100%;
@@ -1052,7 +1060,7 @@ a {
 } */
 @media (max-width: 1024px) {
   .section {
-    padding: 100px 72px;
+    padding: 100px 20px;
   }
 
   .section .title {
@@ -1138,6 +1146,8 @@ a {
     width: 100%;
   }
 
+  .portfolio {
+  }
   .portfolio ul.category {
     display: grid;
     grid-auto-columns: 1fr;
@@ -1162,9 +1172,6 @@ a {
   }
   .portfolio .list dl dd {
     font-weight: 400;
-  }
-  .service ul li {
-    font-size: 24px;
   }
 
   .year dl {
@@ -1201,9 +1208,6 @@ a {
 }
 
 @media (max-width: 767px) {
-  .section {
-    padding: 100px 20px;
-  }
   .section .title {
     font-size: 48px;
   }
@@ -1226,23 +1230,26 @@ a {
 
   .year {
     flex-direction: column;
+    padding: 100px 20px 0 20px;
   }
   .year > div {
     gap: 0;
     justify-content: space-between;
+    flex-direction: column;
   }
   .year dl {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
   }
   .year dl dt {
     font-size: 58px;
-    text-align: left;
+    text-align: right;
     line-height: 50px;
   }
   .year dl dd {
     font-size: 14px;
     padding-bottom: 0;
+    text-align: right;
   }
   .project-desc .project-title {
     padding-bottom: 0;
@@ -1370,8 +1377,17 @@ a {
     overflow: hidden;
   }
   .project-desc .project-title {
-    font-size: 100px;
+    font-size: 150px;
   }
+  .project-desc .project-title {
+    text-align: center;
+    color: #000;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%) !important;
+  }
+
   .content {
     position: relative;
     z-index: 10;
@@ -1446,6 +1462,7 @@ a {
     text-align: center;
     text-align: center;
     align-self: start;
+    min-height: auto;
   }
 
   /* .box {
@@ -1457,12 +1474,40 @@ a {
   .box {
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
   .justify_center {
     justify-content: center;
   }
   .justify_center > div {
     overflow: hidden;
+    height: auto;
+  }
+
+  .justify_center > div {
+    margin-top: 0;
+    /* overflow: hidden; */
+    /* height: auto;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start; */
+    gap: 40px;
+    flex-direction: column;
+    display: block;
+  }
+
+  .justify_center > div img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .box {
+    height: auto;
+    display: block;
+    position: relative;
+    align-items: flex-start;
+  }
+  .year {
+    flex-direction: column;
   }
 }

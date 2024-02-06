@@ -331,48 +331,84 @@ $(".counterUp").counterUp({
 
 
 
+// const image_wrap = gsap.utils.toArray(".image_wrap");
+
+// let triggerElement = document.querySelector('.display_grid');
+// //  let targetElement = $(".nav_logo");
+
+// let tl = gsap.timeline({
+//   // yes, we can add it to an entire timeline!
+
+//   //  let targetElement = $(".nav_logo");
+//   scrollTrigger: {
+//     trigger: triggerElement,
+//     pin: false,   // pin the trigger element while activelength
+//     start: "top top", // when the top of the trigger hits the top of the viewport
+//     end: "bottom bottom",
+//     scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+//     //markers: true,
+//     onEnter: function() { console.log("onEnter") },
+//     onUpdate: self => {
+
+//     }
+//   }
+// });
+
+// image_wrap.forEach((image_w, i) => {
+//   /* "this" iterate elements */
+//   /* section 1 */
+//   if(i == 0){
+
+//   }
+//   if(i > 0){
+//     tl.from(image_w, {autoAlpha: 0}) 
+//   }
+//   /* section 2 */
+//   if((i+1) == 2){
+//     // add animations and labels to the timeline
+
+//   }
+// });/* end for each */
+
+
+
+
+// 'image_wrap' 클래스를 가진 모든 요소를 배열로 변환합니다.
 const image_wrap = gsap.utils.toArray(".image_wrap");
 
+// 스크롤 애니메이션을 적용할 트리거 요소를 선택합니다.
 let triggerElement = document.querySelector('.display_grid');
-//  let targetElement = $(".nav_logo");
 
-let tl = gsap.timeline({
-  // yes, we can add it to an entire timeline!
+// 화면 크기가 768px 이상일 때만 GSAP 애니메이션을 초기화합니다.
+if (window.innerWidth > 768) {
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      pin: false,   // 트리거 요소를 고정하지 않습니다.
+      start: "top top", // 트리거의 상단이 뷰포트 상단에 도달했을 때 시작
+      end: "bottom bottom", // 트리거의 하단이 뷰포트 하단에 도달했을 때 종료
+      scrub: 1, // 스크롤과 애니메이션이 부드럽게 동기화됩니다.
+      onEnter: function() { console.log("onEnter") },
+      onUpdate: self => {
+        // 스크롤이 업데이트될 때마다 실행할 코드 (현재는 비어 있음)
+      }
+    }
+  });
 
-  //  let targetElement = $(".nav_logo");
-  scrollTrigger: {
-    trigger: triggerElement,
-    pin: false,   // pin the trigger element while activelength
-    start: "top top", // when the top of the trigger hits the top of the viewport
-    end: "bottom bottom",
-    scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-    //markers: true,
-    onEnter: function() { console.log("onEnter") },
-    onUpdate: self => {
+  // 모든 'image_wrap' 요소에 대해 반복하면서 각각에 애니메이션을 적용합니다.
+  image_wrap.forEach((image_w, i) => {
+    // 첫 번째 요소가 아닌 경우 투명도 애니메이션을 적용합니다.
+    if(i == 0){
 
     }
-  }
-});
-
-image_wrap.forEach((image_w, i) => {
-  /* "this" iterate elements */
-  /* section 1 */
-  if(i == 0){
-
-  }
-  if(i > 0){
-    tl.from(image_w, {autoAlpha: 0}) 
-  }
-  /* section 2 */
-  if((i+1) == 2){
-    // add animations and labels to the timeline
-
-  }
-});/* end for each */
-
-
-
-
+    if(i > 0){
+      tl.from(image_w, {autoAlpha: 0}) 
+    } 
+    if((i+1) == 2){
+    }
+    // 추가적인 애니메이션 또는 조건을 여기에 구현할 수 있습니다.
+  });
+}
 
 
 function openTab(evt, tabName) {
