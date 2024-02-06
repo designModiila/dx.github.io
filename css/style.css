@@ -1067,14 +1067,22 @@ a {
     align-self: start;
   }
 
-  .box {
+  /* .box {
     height: 100%;
     display: flex;
     align-items: self-start;
-  }
+  } */
 
+  .box {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
   .justify_center {
     justify-content: center;
+  }
+  .justify_center > div {
+    overflow: hidden;
   }
 }
 
@@ -1088,7 +1096,7 @@ a {
     font-size: 48px;
   }
   .service p {
-    font-size: 64px;
+    font-size: 48px;
   }
   .pcOnly {
     display: none !important;
@@ -1171,12 +1179,13 @@ a {
     margin: 0;
     width: 154%;
     max-width: min-content;
+    filter: blur(3px);
   }
   .about .right {
     position: absolute;
-    left: 0;
+    left: 24%;
     top: 200vh;
-    width: calc(100% - 20%);
+    width: calc(100% - 25%);
   }
   .about .right .txt {
     margin-bottom: 70px;
@@ -1221,13 +1230,19 @@ a {
     grid-template-columns: 1fr;
   }
   .portfolio .list dl {
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 0;
-    flex-direction: column;
+    justify-content: space-between;
   }
-
+  .portfolio .list dl dt {
+    font-size: 22px;
+  }
+  .portfolio .list dl dd {
+    font-size: 14px;
+    font-weight: 400;
+  }
   .with ul {
     display: grid;
     grid-auto-columns: 1fr;
