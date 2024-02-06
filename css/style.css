@@ -401,9 +401,9 @@ header.contact-active ul li a {
   gap: 100px 63px;
 
   grid-auto-columns: 1fr;
-  grid-column-gap: 63px;
+  grid-column-gap: 40px;
   grid-row-gap: 100px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 .portfolio .list dl {
   margin-top: 30px;
@@ -1026,11 +1026,11 @@ a {
   width: 100%;
   align-self: start;
 }
-.box {
+/* .box {
   height: 100%;
   display: flex;
   align-items: center;
-}
+} */
 .justify_center {
   justify-content: center;
 }
@@ -1047,47 +1047,159 @@ a {
   padding-top: 56.25%;
   display: none;
 }
-@media screen and (max-width: 767px) {
-  .display_grid {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
-
-  .mobile_placeholder {
-    display: block;
-  }
-
-  .image_wrap {
-    /* The trick */
-    position: sticky;
-    top: 0;
-    bottom: 0;
-    text-align: center;
-    text-align: center;
-    align-self: start;
-  }
-
-  /* .box {
-    height: 100%;
-    display: flex;
-    align-items: self-start;
-  } */
-
-  .box {
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-  .justify_center {
-    justify-content: center;
-  }
-  .justify_center > div {
-    overflow: hidden;
-  }
-}
 
 /* @media all and (max-width: 767px) {
 } */
+@media (max-width: 1024px) {
+  .section {
+    padding: 100px 72px;
+  }
+
+  .section .title {
+    font-size: 54px;
+  }
+
+  .section.about {
+    padding: 0 0;
+    overflow: hidden;
+  }
+
+  .section.visual .title {
+    font-size: 56px;
+  }
+
+  .about .bg {
+    width: calc(600 / 710 * 100vw);
+    height: calc(600 / 710 * 100vh);
+    /* height: 840px; */
+    background-color: #101010;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    max-width: unset;
+    object-fit: cover;
+    /* filter: brightness(0.3); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about .bg img {
+    filter: blur(4px);
+  }
+  .about-text {
+    padding: 280px 40px 0 72px;
+  }
+  .about .right {
+    position: absolute;
+    left: 35%;
+    top: 200vh;
+    width: calc(100% - 40%);
+    overflow: hidden;
+  }
+  .about .right .txt {
+    gap: 20px;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  .about .right .txt dt {
+    width: 100%;
+    font-size: 50px;
+  }
+  .about .right .txt dd {
+    font-size: 28px;
+  }
+  .display_grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .justify_center > div {
+    margin-top: calc(50% - 100px);
+    overflow: hidden;
+    height: 543px;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 40px;
+  }
+  .justify_center > div img {
+    height: 543px;
+    max-width: max-content;
+  }
+  .with ul {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .with ul li {
+    width: 100%;
+  }
+
+  .portfolio ul.category {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .portfolio ul.category li {
+    width: 100%;
+  }
+  .portfolio .category li button.tablinks {
+    width: calc(100%);
+    padding: 20px;
+    border: solid 1px #dcdcdc;
+    display: block;
+    margin-right: -1px;
+  }
+  .portfolio .list dl {
+    margin-top: 10px;
+    gap: 0;
+    justify-content: space-between;
+  }
+  .portfolio .list dl dd {
+    font-weight: 400;
+  }
+  .service ul li {
+    font-size: 24px;
+  }
+
+  .year dl {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-direction: column;
+  }
+  .year dl dt {
+    text-align: center;
+    font-size: 60px;
+  }
+  .year dl dt.counterUp_02 {
+  }
+  .project-desc {
+    width: 100vw;
+  }
+  .year dl dd {
+    font-size: 18px;
+    padding-bottom: 0;
+  }
+  .project-desc .project-title {
+    padding-bottom: 0;
+    letter-spacing: -20px;
+    font-size: 190px;
+  }
+  .year > div {
+    display: flex;
+    gap: 30px;
+  }
+  .contact .description {
+    font-size: 26px;
+  }
+}
+
 @media (max-width: 767px) {
   .section {
     padding: 100px 20px;
@@ -1314,5 +1426,43 @@ a {
     gap: 32px;
     margin-top: 35px;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 767px) {
+  .display_grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .mobile_placeholder {
+    display: block;
+  }
+
+  .image_wrap {
+    /* The trick */
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    text-align: center;
+    align-self: start;
+  }
+
+  /* .box {
+    height: 100%;
+    display: flex;
+    align-items: self-start;
+  } */
+
+  .box {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .justify_center {
+    justify-content: center;
+  }
+  .justify_center > div {
+    overflow: hidden;
   }
 }
