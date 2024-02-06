@@ -25,6 +25,14 @@ li {
   margin: 0;
   padding: 0;
 }
+
+.pcOnly {
+  display: block !important;
+}
+.moOnly {
+  display: none !important;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -200,6 +208,7 @@ header.contact-active ul li a {
 
 .about .bg img {
   margin: 0;
+  width: 100%;
 }
 .about .pin-box {
   position: absolute;
@@ -387,9 +396,14 @@ header.contact-active ul li a {
 }
 
 .portfolio .list ul {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   gap: 100px 63px;
+
+  grid-auto-columns: 1fr;
+  grid-column-gap: 63px;
+  grid-row-gap: 100px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .portfolio .list dl {
   margin-top: 30px;
@@ -1061,5 +1075,229 @@ a {
 
   .justify_center {
     justify-content: center;
+  }
+}
+
+/* @media all and (max-width: 767px) {
+} */
+@media (max-width: 767px) {
+  .section {
+    padding: 100px 20px;
+  }
+  .section .title {
+    font-size: 48px;
+  }
+  .service p {
+    font-size: 64px;
+  }
+  .pcOnly {
+    display: none !important;
+  }
+  .moOnly {
+    display: block !important;
+  }
+
+  header {
+    padding: 20px;
+  }
+  nav {
+    display: none;
+  }
+
+  .year {
+    flex-direction: column;
+  }
+  .year > div {
+    gap: 0;
+    justify-content: space-between;
+  }
+  .year dl {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .year dl dt {
+    font-size: 58px;
+    text-align: left;
+    line-height: 50px;
+  }
+  .year dl dd {
+    font-size: 14px;
+    padding-bottom: 0;
+  }
+  .project-desc .project-title {
+    padding-bottom: 0;
+  }
+  .section.visual .visual-content {
+    /* align-items: flex-start; */
+  }
+  .section.visual .title {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .section.visual .description {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+  }
+  .about-text {
+    padding: 70px 20px 20px 20px;
+  }
+  .section.about-text .title {
+    font-size: 48px;
+  }
+  .about .pin-box {
+  }
+  .section.about {
+    padding: 0;
+  }
+  .about .bg {
+    width: calc(335 / 375 * 100vw);
+    height: calc(184 / 375 * 100vh);
+    /* height: 840px; */
+    background-color: #101010;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    max-width: unset;
+    object-fit: cover;
+    /* filter: brightness(0.3); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about .bg img {
+    margin: 0;
+    width: 154%;
+    max-width: min-content;
+  }
+  .about .right {
+    position: absolute;
+    left: 0;
+    top: 200vh;
+    width: calc(100% - 20%);
+  }
+  .about .right .txt {
+    margin-bottom: 70px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .about .right .txt dt {
+    font-size: 28px;
+    width: 100%;
+  }
+  .about .right .txt.on dd {
+    font-size: 18px;
+  }
+
+  .portfolio ul.category {
+    gap: 0;
+    display: grid;
+    flex-wrap: wrap;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .portfolio .category li button.tablinks {
+    font-size: 14px;
+    border: solid 1px #dcdcdc;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .portfolio .category li button.tablinks.active {
+    background: #46464f;
+    color: #fff;
+  }
+  .portfolio .list ul {
+    display: grid;
+    flex-wrap: wrap;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    grid-template-columns: 1fr;
+  }
+  .portfolio .list dl {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    flex-direction: column;
+  }
+
+  .with ul {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .with ul li {
+    width: 100%;
+  }
+  .project-desc {
+    width: 100vw;
+    overflow: hidden;
+  }
+  .project-desc .project-title {
+    font-size: 100px;
+  }
+  .content {
+    position: relative;
+    z-index: 10;
+  }
+  .contact .btn-wrap {
+    display: inline-flex;
+    gap: 32px;
+    margin-top: 35px;
+    flex-direction: column;
+  }
+  .contact .description {
+    font-size: 24px;
+  }
+  footer {
+    padding: 40px 20px;
+    flex-direction: column;
+    position: relative;
+  }
+  footer .left {
+    gap: 20px;
+    flex-direction: column;
+  }
+  footer .left ul li a {
+    font-size: 24px;
+    line-height: normal;
+  }
+  footer .right {
+    gap: 0;
+  }
+  footer .right .company-name {
+    margin-bottom: 7px;
+  }
+  footer .right p.sns {
+    position: absolute;
+    right: 20px;
+    top: 47px;
+  }
+  footer .right p.sns a {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+  }
+
+  .progress-wrap {
+    right: 20px;
+    bottom: 40px;
+    z-index: 100;
+  }
+
+  .contact .btn-wrap {
+    display: inline-flex;
+    gap: 32px;
+    margin-top: 35px;
+    flex-direction: column;
   }
 }
