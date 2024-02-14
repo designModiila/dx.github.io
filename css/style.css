@@ -315,19 +315,8 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
 
     
     .pop-con { padding: 80px 80px 40px 80px; }
-    .btn-layerClose {
-        margin: 0 0 0 0;
-        position: fixed;
-        right: 0;
-        top: 0;
-    }
-    .pop-con .text-wrap {
-        width: auto;
-        max-width: 350px;
-        position: fixed;
-        left: 80px;
-        top: 80px;
-    }
+    .btn-layerClose { margin: 0 0 0 0;  position: fixed;  right: 0;  top: 0;}
+    .pop-con .text-wrap { width: auto;  max-width: 350px;  position: fixed;  left: 80px;  top: 80px; }
 
  }
 
@@ -340,7 +329,7 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .section .title  {font-size: 68px;}
     .service p {font-size: 68px;}
     .footprints .sentence-wrap .sentence-text {width: 100%;}
-
+    .contact {text-align: center; padding-top: 0;}
     
  }
 
@@ -354,6 +343,7 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .footprints dl { display: flex;  gap: 0;  flex-direction: column;  align-items: center; width: 100%; }
     .footprints dl dt {text-align: center;}
     .footprints dl dd { padding-bottom: 0;} 
+    .contact {text-align: center; padding-top: 0;}
     .contact .description .moOnly {display: block !important;}
     
 
@@ -403,7 +393,7 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .footprints dl dt {text-align: center;}
     .footprints dl dd { padding-bottom: 0;}
 
-
+    .contact {text-align: center; padding-top: 0;}
     
     footer { padding: 28px 5vw;flex-direction: column;position: relative; } 
     footer .left {gap: 20px; flex-direction: column; } 
@@ -494,6 +484,7 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .footprints dl dt {text-align: center; font-size:68px;}
     .footprints dl dd {font-size: 18px; padding-bottom: 0;}
 
+    .contact {text-align: center; padding-top: 0;}
     .contact .title {margin-bottom: 0;}
     .contact .description {font-size: 20px;}
     .contact .btn-wrap { display: inline-flex;  gap: 32px;  margin-top: 35px; flex-direction: column; }
@@ -508,3 +499,25 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .progress-wrap {right:28px; bottom:28px;}
     
      }
+
+
+@media (max-width: 480px) {
+    .section .title {font-size: 26px;}
+    .about .right { left: calc(100% - 75%); width: calc(100% - 30%);}
+    .about .right .txt dt {font-size: 24px; }
+    .about .right .txt dd {font-size: 16px; }
+    .service .content {margin-bottom: 80px;}
+    .service .content > div {gap: 30px; margin-top: 20px;}
+    .service .content > div ul li {font-size: 16px;  line-height: 24px; } 
+    .service .content > div ul { margin-top: 0; }
+    .service p {font-size: 26px;margin-bottom: 0;width: 120px;}
+    .portfolio .category li button.tablinks {padding: 15px 3px; font-size: 14px; font-weight: 700;;}
+    .portfolio .list dl{align-items: flex-start;}
+    .portfolio .list dl dt,
+    .portfolio .list dl dt  {font-size: 18px;}
+    .footprints dl dt {font-size: 60px;}
+    .contact {text-align: center; padding-top: 0;}
+    .contact .description {font-size: 16px;}
+    .contact .btn-wrap {gap: 20px;}
+    
+}
