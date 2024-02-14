@@ -513,6 +513,8 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .service .content > div ul li {font-size: 16px;  line-height: 24px; } 
     .service .content > div ul { margin-top: 0; }
     .service p {font-size: 26px;margin-bottom: 0;width: 120px;}
+    .with ul {display: grid;grid-auto-columns: 1fr; grid-column-gap: 40px; grid-row-gap: 40px;grid-template-columns: 1fr 1fr;}
+    .with ul li {width: 100%;}
     .portfolio .category li button.tablinks {padding: 15px 3px; font-size: 14px; font-weight: 700;;}
     .portfolio .list dl{align-items: flex-start;}
     .portfolio .list dl dt,
@@ -521,5 +523,6 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .contact {text-align: center; padding-top: 0;}
     .contact .description {font-size: 16px;}
     .contact .btn-wrap {gap: 20px;}
+    
     
 }
