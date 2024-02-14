@@ -410,6 +410,7 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
 
  /* 반응형 스타일 */
 @media (max-width: 768px) { /* 공통 스타일 */
+    #cursor {display: none;}
     .pcOnly { display: none !important; } 
     .moOnly { display: block !important; } 
     .section { padding: 100px 5vw; } 
