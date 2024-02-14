@@ -349,6 +349,7 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
 
  }
 @media (max-width: 1024px) {
+    #cursor {display: none;}
     .section { padding: 100px 5vw; } 
     .section .title { font-size: 48px; margin-bottom: 50px;} 
     .about-text {padding: 100px 5vw 0 5vw;}
