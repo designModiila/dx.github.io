@@ -122,9 +122,9 @@ header.footprints-active .toggle_menu span:after { background: var(--svg-color-b
 .service .content { height: 100%; width: 100%; align-self: start; display: flex; align-items: center; } 
 
 .with {padding: 0 160px 280px 160px;}
-.with ul {display: grid;grid-auto-columns: 1fr; grid-column-gap: 40px; grid-row-gap: 40px;grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
-.with ul li {width: 100%; text-align: center;}
-
+.with ul {display: grid;grid-auto-columns: 1fr; grid-column-gap: 40px; grid-row-gap: 40px;grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;}
+.with ul li {width: 100%; text-align: center; display: flex; align-items: center; justify-content: center;}
+.with ul li img {max-width: 160px;}
 /* .with ul { display: flex; gap: 60px 40px; flex-wrap: wrap; } 
 .with ul li { width: 230px; display: flex; align-items: center; justify-content: space-around; }  */
 
