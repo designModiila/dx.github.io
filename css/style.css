@@ -229,7 +229,7 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
 
  /* #cursor
 ================================================== */
-
+/* 
 #cursor { position: fixed; top: 0; left: 0; width: 3rem; height: 3rem; z-index: 2000; pointer-events: none;} 
 #cursor div { position: absolute; display: grid; place-items: center; } 
 #cursor div div { border: 1px solid var(--white); border-radius: 50%; animation: pulse 2.5s linear infinite; box-shadow: 0 0 50px 5px #d7abff6e; } 
@@ -257,7 +257,7 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
  0% { transform: scale(1); opacity: 1; } 
  50% { transform: scale(1.25); opacity: 0.25; } 
  100% { transform: scale(1); opacity: 1; } 
- }
+ } */
 
 @keyframes openMenuTop { 
  0% { top: -8px; transform: scaleX(1); } 
@@ -315,8 +315,19 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
 
     
     .pop-con { padding: 80px 80px 40px 80px; }
-    .btn-layerClose { margin: 0 0 0 0;  position: fixed;  right: 0;  top: 0;}
-    .pop-con .text-wrap { width: auto;  max-width: 350px;  position: fixed;  left: 80px;  top: 80px; }
+    .btn-layerClose {
+        margin: 0 0 0 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+    .pop-con .text-wrap {
+        width: auto;
+        max-width: 350px;
+        position: fixed;
+        left: 80px;
+        top: 80px;
+    }
 
  }
 
@@ -329,7 +340,7 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .section .title  {font-size: 68px;}
     .service p {font-size: 68px;}
     .footprints .sentence-wrap .sentence-text {width: 100%;}
-    .contact {text-align: center; padding-top: 0;}
+
     
  }
 
@@ -343,13 +354,11 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .footprints dl { display: flex;  gap: 0;  flex-direction: column;  align-items: center; width: 100%; }
     .footprints dl dt {text-align: center;}
     .footprints dl dd { padding-bottom: 0;} 
-    .contact {text-align: center; padding-top: 0;}
     .contact .description .moOnly {display: block !important;}
     
 
  }
 @media (max-width: 1024px) {
-    #cursor {display: none;}
     .section { padding: 100px 5vw; } 
     .section .title { font-size: 48px; margin-bottom: 50px;} 
     .about-text {padding: 100px 5vw 0 5vw;}
@@ -394,7 +403,7 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .footprints dl dt {text-align: center;}
     .footprints dl dd { padding-bottom: 0;}
 
-    .contact {text-align: center; padding-top: 0;}
+
     
     footer { padding: 28px 5vw;flex-direction: column;position: relative; } 
     footer .left {gap: 20px; flex-direction: column; } 
@@ -405,23 +414,12 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     footer .right p.sns a {width: 100%; height: 100%; display: block;}
 
     .progress-wrap {right:28px; bottom:28px;}
-    .btn-layerClose {margin: 0 0 0 0; display: inline-block; cursor: pointer; width: 40px; height: 40px; background: url(../images/btn_close.png) no-repeat center center; position: absolute; z-index: 1100; right: 0; top: 0; background-size: 90% auto;}
-    .dim-layer .pop-layer .box-inner {padding: 0 40px;}
-    .pop-con { display: flex; gap: 20px; flex-direction: column; justify-content: flex-end; padding: 80px 40px 40px 40px; position: relative;}
-    .pop-con .title {font-size: 24px;}
-    .pop-con .title br {display: none;}
-    .pop-con .text-wrap {width: auto; max-width: auto; position: relative; left: 0; top: 0;}
-    .pop-con .category {font-size: 18px; font-style: normal; font-weight: 600; line-height: normal; margin-bottom: 15px;}
-    .pop-con .pop-img-wrap {width: fit-content; max-width: calc(100%);}
-    .pop-con .pop-img-wrap > div {flex-direction: column;}
-    .pop-con .pop-img-wrap > div img,
-    .pop-con .pop-img-wrap > div.multi img {width: calc(100%);}
+
 
 } 
 
  /* 반응형 스타일 */
 @media (max-width: 768px) { /* 공통 스타일 */
-    #cursor {display: none;}
     .pcOnly { display: none !important; } 
     .moOnly { display: block !important; } 
     .section { padding: 100px 5vw; } 
@@ -473,7 +471,7 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .portfolio .list ul {display: flex; gap: 40px;}
     .portfolio .list dl {margin-top: 15px;}
     
-    .btn-layerClose {margin: 0 0 0 0; display: inline-block; cursor: pointer; width: 40px; height: 40px; background: url(../images/btn_close.png) no-repeat center center; position: absolute; z-index: 1100; right: 0; top: 0; background-size: 90% auto;}
+    .btn-layerClose {margin: 0 0 0 0; display: inline-block; cursor: pointer; width: 52px; height: 52px; background: url(../images/btn_close.png) no-repeat center center; position: absolute; z-index: 1100; right: 0; top: 0;}
     .dim-layer .pop-layer .box-inner {padding: 0 40px;}
     .pop-con { display: flex; gap: 20px; flex-direction: column; justify-content: flex-end; padding: 80px 40px 40px 40px; position: relative;}
     .pop-con .title {font-size: 24px;}
@@ -496,7 +494,6 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .footprints dl dt {text-align: center; font-size:68px;}
     .footprints dl dd {font-size: 18px; padding-bottom: 0;}
 
-    .contact {text-align: center; padding-top: 0;}
     .contact .title {margin-bottom: 0;}
     .contact .description {font-size: 20px;}
     .contact .btn-wrap { display: inline-flex;  gap: 32px;  margin-top: 35px; flex-direction: column; }
@@ -511,28 +508,3 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .progress-wrap {right:28px; bottom:28px;}
     
      }
-
-
-@media (max-width: 480px) {
-    .section .title {font-size: 26px;}
-    .about .right { left: calc(100% - 75%); width: calc(100% - 30%);}
-    .about .right .txt dt {font-size: 24px; }
-    .about .right .txt dd {font-size: 16px; }
-    .service .content {margin-bottom: 80px;}
-    .service .content > div {gap: 30px; margin-top: 20px;}
-    .service .content > div ul li {font-size: 16px;  line-height: 24px; } 
-    .service .content > div ul { margin-top: 0; }
-    .service p {font-size: 26px;margin-bottom: 0;width: 120px;}
-    .with ul {display: grid;grid-auto-columns: 1fr; grid-column-gap: 40px; grid-row-gap: 40px;grid-template-columns: 1fr 1fr;}
-    .with ul li {width: 100%;}
-    .portfolio .category li button.tablinks {padding: 15px 3px; font-size: 14px; font-weight: 700;;}
-    .portfolio .list dl{align-items: flex-start;}
-    .portfolio .list dl dt,
-    .portfolio .list dl dt  {font-size: 18px;}
-    .footprints dl dt {font-size: 60px;}
-    .contact {text-align: center; padding-top: 0;}
-    .contact .description {font-size: 16px;}
-    .contact .btn-wrap {gap: 20px;}
-    
-    
-}
