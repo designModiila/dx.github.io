@@ -130,7 +130,7 @@ header.footprints-active .toggle_menu span:after { background: var(--svg-color-b
 
 .portfolio { background: #f3f3f6; } 
 .portfolio ul.category { display: flex; gap: 45px; margin: 58px 0 94px 0; } 
-.portfolio .category li button.tablinks { color: #46464f; font-family: Pretendard; font-size: 16px; font-style: normal; font-weight: 800; line-height: normal; opacity: 0.3; } 
+.portfolio .category li button.tablinks { color: #46464f; cursor: pointer; font-family: Pretendard; font-size: 16px; font-style: normal; font-weight: 800; line-height: normal; opacity: 0.3; } 
 .portfolio .category li button.tablinks:hover,
 .portfolio .category li button.tablinks.active { opacity: 1; } 
 .portfolio .category-list.tabcontent { display: none; } 
