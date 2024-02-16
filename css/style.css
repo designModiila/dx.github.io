@@ -174,7 +174,7 @@ footer { background: var(--dx-title); padding: 62px 160px; display: flex; justif
 footer .left { display: flex; gap: 116px; } 
 footer .left ul li a { color: var(--white); font-family: Pretendard; font-size: 36px; font-style: normal; font-weight: 800; line-height: 52px; text-transform: uppercase; } 
 footer .right { display: flex; gap: 198px; } 
-footer .right p { color: var(--white); font-family: Pretendard; font-size: 16px; font-style: normal; font-weight: 800; line-height: normal; } 
+footer .right p { color: var(--white); font-family: Pretendard; font-size: 16px; font-style: normal; font-weight: 600; line-height: normal; } 
 footer .right .company-name { margin-bottom: 30px; margin-top: 74px; } 
 footer .right .company-add,
 footer .right .company-tel { font-size: 14px; margin-bottom: 7px; } 
