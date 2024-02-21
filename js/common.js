@@ -312,6 +312,7 @@ $(document).ready(function() {
 		var $href = $(this).data("popup-target"); // Use data attribute to target the popup
 		layer_popup($href);
 		window.lastFocusedElement = $(this); // Optional: Remember the trigger element
+		$('body').addClass('no-scroll'); // body 스크롤 방지
 	  });
 	  
 	  function layer_popup(el) {
@@ -335,6 +336,7 @@ $(document).ready(function() {
 		$el.find(".popup-close").click(function(event) {
 		  event.preventDefault();
 		  $el.fadeOut();
+		  $('body').removeClass('no-scroll'); // 스크롤 방지 해제
 		  // Optional: Return focus to the element that opened the popup
 		  if (window.lastFocusedElement) {
 			window.lastFocusedElement.focus();
@@ -345,6 +347,7 @@ $(document).ready(function() {
 		$(".layer .dimBg").click(function(event) {
 		  event.preventDefault();
 		  $el.fadeOut();
+		  $('body').removeClass('no-scroll'); // 스크롤 방지 해제
 		  return false;
 		});
 	  }
