@@ -462,6 +462,8 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .pin_grid div:nth-child(3) {order:4; margin-bottom: 0;}
     .pin_grid div:nth-child(4) {order:3}
 
+
+    .with ul li img {max-width: 100%;}
     
     .portfolio {background: #f3f3f6;}
     .portfolio ul.category {display: flex; gap: 2px; margin: 30px 0 50px 0; flex-wrap: wrap;}
@@ -469,7 +471,7 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .portfolio .category li button.tablinks {width: 100%; background: #fff; padding: 12px 5px; color:#81818A; font-weight: 800; opacity: 1;}
     .portfolio .category li button.tablinks.active {background: #212121; color:#fff;}
     .portfolio .list ul {display: flex; gap: 40px;}
-    .portfolio .list dl {margin-top: 15px;}
+    .portfolio .list dl {margin-top: 15px; }
     
     .btn-layerClose {margin: 0 0 0 0; display: inline-block; cursor: pointer; width: 52px; height: 52px; background: url(../images/btn_close.png) no-repeat center center; position: absolute; z-index: 1100; right: 0; top: 0;}
     .dim-layer .pop-layer .box-inner {padding: 0 40px;}
@@ -508,3 +510,29 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .progress-wrap {right:28px; bottom:28px;}
     
      }
+
+
+     @media (max-width: 480px) {    
+        .section .title { font-size: 24px; } 
+        .about .right .txt dt { font-size: 21px;}
+        .about .right .txt dd {font-size: 16px;}
+        .service p {font-size: 24px; width: 110px;}  
+        .service .content > div ul li {font-size: 16px; line-height: 24px;}
+        .service .content > div {gap: 24px; margin-top: 15px;}
+        .with ul li img {max-width: 100%;}
+        .portfolio .list dl {font-size: 14px; align-items: flex-start; margin-top: 5px;}
+        .portfolio .list dl dt {font-size: 14px;}
+        .portfolio .list dl dd {font-size: 14px;}
+        .portfolio .category li button.tablinks {font-size: 14px; font-weight: 600;}
+        .footprints > div {gap:24px}
+        .footprints .sentence-wrap .sentence-text {font-size: 180px;}
+        .footprints dl dt {font-size: 52px;}
+        .footprints dl dd {font-size: 14px;}
+        .contact .description { font-size: 16px;}
+        .btn-layerClose {width: 40px; height: 40px; background-size: 75% auto;}
+        .pop-con .title {font-size: 21px; margin-bottom: 5px;}
+        .pop-con .description {font-size: 14px;}
+        footer .right p {font-size: 14px; font-weight: 500;}
+        footer .left ul li a {font-size: 16px;}
+        
+    }
