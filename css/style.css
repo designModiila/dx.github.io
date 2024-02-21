@@ -424,7 +424,7 @@ footer .right .copy { color: #9f9f9f; font-size: 12px; font-weight: 600; line-he
     .moOnly { display: block !important; } 
     .section { padding: 100px 5vw; } 
     .section .title { font-size: 32px; margin-bottom: 30px;} 
-    .toggle_menu { display: block; position: fixed; top: 5vw; right: 28px;} 
+    .toggle_menu { display: block; position: fixed; top: 28px; right: 28px;} 
 
     header { padding: 28px 5vw; } 
     header nav ul { display: none; } 
